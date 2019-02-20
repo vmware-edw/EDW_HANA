@@ -1480,9 +1480,33 @@
       <descriptions defaultDescription="RESELLER_ADDRESS_UUID"/>
       <keyMapping columnObjectName="Projection_1" columnName="RESELLER_ADDRESS_UUID"/>
     </attribute>
+    <attribute id="TERRITORY_ID" order="157" semanticType="empty" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="TERRITORY_ID"/>
+      <keyMapping columnObjectName="Projection_1" columnName="TERRITORY_ID"/>
+    </attribute>
+    <attribute id="TERRITORY_ID_BOOK" order="158" semanticType="empty" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="TERRITORY_ID_BOOK"/>
+      <keyMapping columnObjectName="Projection_1" columnName="TERRITORY_ID_BOOK"/>
+    </attribute>
     <attribute id="SOLD_TO_EMAIL_ADDRESS" order="159" displayAttribute="false" attributeHierarchyActive="false">
       <descriptions defaultDescription="SOLD_TO_EMAIL_ADDRESS"/>
       <keyMapping columnObjectName="Projection_1" columnName="SOLD_TO_EMAIL_ADDRESS"/>
+    </attribute>
+    <attribute id="BILLTO_CUSTOMER_ID" order="160" semanticType="empty" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="BILLTO_CUSTOMER_ID"/>
+      <keyMapping columnObjectName="Projection_1" columnName="BILLTO_CUSTOMER_ID"/>
+    </attribute>
+    <attribute id="SHIPTO_CUSTOMER_ID" order="161" semanticType="empty" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="SHIPTO_CUSTOMER_ID"/>
+      <keyMapping columnObjectName="Projection_1" columnName="SHIPTO_CUSTOMER_ID"/>
+    </attribute>
+    <attribute id="ENDUSER_CUSTOMER_ID" order="162" semanticType="empty" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="ENDUSER_CUSTOMER_ID"/>
+      <keyMapping columnObjectName="Projection_1" columnName="ENDUSER_CUSTOMER_ID"/>
+    </attribute>
+    <attribute id="RESELLER_CUSTOMER_ID" order="163" semanticType="empty" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="RESELLER_CUSTOMER_ID"/>
+      <keyMapping columnObjectName="Projection_1" columnName="RESELLER_CUSTOMER_ID"/>
     </attribute>
     <attribute id="BILLTO_CUST_NUMBER" order="164" displayAttribute="false" attributeHierarchyActive="false">
       <descriptions defaultDescription="BILLTO_CUST_NUMBER"/>
@@ -1520,6 +1544,30 @@
       <descriptions defaultDescription="CLOUD_MGMT_REP"/>
       <keyMapping columnObjectName="Projection_1" columnName="CLOUD_MGMT_REP"/>
     </attribute>
+    <attribute id="HEADER_CREATION_DATE" order="173" semanticType="empty" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="HEADER_CREATION_DATE"/>
+      <keyMapping columnObjectName="Projection_1" columnName="HEADER_CREATION_DATE"/>
+    </attribute>
+    <attribute id="HEADER_LAST_UPDATE_DATE" order="174" semanticType="empty" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="HEADER_LAST_UPDATE_DATE"/>
+      <keyMapping columnObjectName="Projection_1" columnName="HEADER_LAST_UPDATE_DATE"/>
+    </attribute>
+    <attribute id="LINE_CREATION_DATE" order="175" semanticType="empty" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="LINE_CREATION_DATE"/>
+      <keyMapping columnObjectName="Projection_1" columnName="LINE_CREATION_DATE"/>
+    </attribute>
+    <attribute id="LINE_LAST_UPDATE_DATE" order="176" semanticType="empty" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="LINE_LAST_UPDATE_DATE"/>
+      <keyMapping columnObjectName="Projection_1" columnName="LINE_LAST_UPDATE_DATE"/>
+    </attribute>
+    <attribute id="DIST_CREATION_DATE" order="177" semanticType="empty" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="DIST_CREATION_DATE"/>
+      <keyMapping columnObjectName="Projection_1" columnName="DIST_CREATION_DATE"/>
+    </attribute>
+    <attribute id="DIST_LAST_UPDATE_DATE" order="178" semanticType="empty" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="DIST_LAST_UPDATE_DATE"/>
+      <keyMapping columnObjectName="Projection_1" columnName="DIST_LAST_UPDATE_DATE"/>
+    </attribute>
     <attribute id="SDP_OFFERING_TYPE" order="179" displayAttribute="false" attributeHierarchyActive="false">
       <descriptions defaultDescription="SDP_OFFERING_TYPE"/>
       <keyMapping columnObjectName="Projection_1" columnName="SDP_OFFERING_TYPE"/>
@@ -1547,6 +1595,10 @@
     <attribute id="ORIGINAL_SNSMONTHS" order="185" semanticType="empty" displayAttribute="false" attributeHierarchyActive="false">
       <descriptions defaultDescription="ORIGINAL_SNSMONTHS"/>
       <keyMapping columnObjectName="Projection_1" columnName="ORIGINAL_SNSMONTHS"/>
+    </attribute>
+    <attribute id="ACV_INSTALLMENT_NUMBER" order="188" semanticType="empty" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="ACV_INSTALLMENT_NUMBER"/>
+      <keyMapping columnObjectName="Projection_1" columnName="ACV_INSTALLMENT_NUMBER"/>
     </attribute>
     <attribute id="ALLIANCE_TYPE" order="189" displayAttribute="false" attributeHierarchyActive="false">
       <descriptions defaultDescription="ALLIANCE_TYPE"/>
@@ -1907,54 +1959,6 @@
       <descriptions defaultDescription="COMM_CREDIT_DATE"/>
       <measureMapping columnObjectName="Projection_1" columnName="COMM_CREDIT_DATE"/>
     </measure>
-    <measure id="TERRITORY_ID" order="157" aggregationType="sum" measureType="simple">
-      <descriptions defaultDescription="TERRITORY_ID"/>
-      <measureMapping columnObjectName="Projection_1" columnName="TERRITORY_ID"/>
-    </measure>
-    <measure id="TERRITORY_ID_BOOK" order="158" aggregationType="sum" measureType="simple">
-      <descriptions defaultDescription="TERRITORY_ID_BOOK"/>
-      <measureMapping columnObjectName="Projection_1" columnName="TERRITORY_ID_BOOK"/>
-    </measure>
-    <measure id="BILLTO_CUSTOMER_ID" order="160" aggregationType="sum" measureType="simple">
-      <descriptions defaultDescription="BILLTO_CUSTOMER_ID"/>
-      <measureMapping columnObjectName="Projection_1" columnName="BILLTO_CUSTOMER_ID"/>
-    </measure>
-    <measure id="SHIPTO_CUSTOMER_ID" order="161" aggregationType="sum" measureType="simple">
-      <descriptions defaultDescription="SHIPTO_CUSTOMER_ID"/>
-      <measureMapping columnObjectName="Projection_1" columnName="SHIPTO_CUSTOMER_ID"/>
-    </measure>
-    <measure id="ENDUSER_CUSTOMER_ID" order="162" aggregationType="sum" measureType="simple">
-      <descriptions defaultDescription="ENDUSER_CUSTOMER_ID"/>
-      <measureMapping columnObjectName="Projection_1" columnName="ENDUSER_CUSTOMER_ID"/>
-    </measure>
-    <measure id="RESELLER_CUSTOMER_ID" order="163" aggregationType="sum" measureType="simple">
-      <descriptions defaultDescription="RESELLER_CUSTOMER_ID"/>
-      <measureMapping columnObjectName="Projection_1" columnName="RESELLER_CUSTOMER_ID"/>
-    </measure>
-    <measure id="HEADER_CREATION_DATE" order="173" aggregationType="min" measureType="simple">
-      <descriptions defaultDescription="HEADER_CREATION_DATE"/>
-      <measureMapping columnObjectName="Projection_1" columnName="HEADER_CREATION_DATE"/>
-    </measure>
-    <measure id="HEADER_LAST_UPDATE_DATE" order="174" aggregationType="min" measureType="simple">
-      <descriptions defaultDescription="HEADER_LAST_UPDATE_DATE"/>
-      <measureMapping columnObjectName="Projection_1" columnName="HEADER_LAST_UPDATE_DATE"/>
-    </measure>
-    <measure id="LINE_CREATION_DATE" order="175" aggregationType="min" measureType="simple">
-      <descriptions defaultDescription="LINE_CREATION_DATE"/>
-      <measureMapping columnObjectName="Projection_1" columnName="LINE_CREATION_DATE"/>
-    </measure>
-    <measure id="LINE_LAST_UPDATE_DATE" order="176" aggregationType="min" measureType="simple">
-      <descriptions defaultDescription="LINE_LAST_UPDATE_DATE"/>
-      <measureMapping columnObjectName="Projection_1" columnName="LINE_LAST_UPDATE_DATE"/>
-    </measure>
-    <measure id="DIST_CREATION_DATE" order="177" aggregationType="min" measureType="simple">
-      <descriptions defaultDescription="DIST_CREATION_DATE"/>
-      <measureMapping columnObjectName="Projection_1" columnName="DIST_CREATION_DATE"/>
-    </measure>
-    <measure id="DIST_LAST_UPDATE_DATE" order="178" aggregationType="min" measureType="simple">
-      <descriptions defaultDescription="DIST_LAST_UPDATE_DATE"/>
-      <measureMapping columnObjectName="Projection_1" columnName="DIST_LAST_UPDATE_DATE"/>
-    </measure>
     <measure id="ITCV_DETAIL_TOTAL" order="186" aggregationType="sum" measureType="simple">
       <descriptions defaultDescription="ITCV_DETAIL_TOTAL"/>
       <measureMapping columnObjectName="Projection_1" columnName="ITCV_DETAIL_TOTAL"/>
@@ -1962,10 +1966,6 @@
     <measure id="ITCV_DETAIL_TOTAL_LC" order="187" aggregationType="sum" measureType="simple">
       <descriptions defaultDescription="ITCV_DETAIL_TOTAL_LC"/>
       <measureMapping columnObjectName="Projection_1" columnName="ITCV_DETAIL_TOTAL_LC"/>
-    </measure>
-    <measure id="ACV_INSTALLMENT_NUMBER" order="188" aggregationType="sum" measureType="simple">
-      <descriptions defaultDescription="ACV_INSTALLMENT_NUMBER"/>
-      <measureMapping columnObjectName="Projection_1" columnName="ACV_INSTALLMENT_NUMBER"/>
     </measure>
     <measure id="HEADER_TOTAL_CC" order="191" aggregationType="sum" measureType="simple">
       <descriptions defaultDescription="HEADER_TOTAL_CC"/>
