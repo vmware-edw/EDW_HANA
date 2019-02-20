@@ -1,0 +1,14 @@
+{
+	"vebs-grant1": {
+		"object_owner": { 
+			"roles": [
+				"VEBS::external_access_g"
+			]
+		},
+		"application_user": {
+			"roles": [
+				"VEBS::external_access"
+			]
+		}
+	}
+}

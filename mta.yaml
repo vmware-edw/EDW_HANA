@@ -1,0 +1,94 @@
+ID: EDW
+_schema-version: '2.1'
+version: 0.0.1
+
+modules:
+ - name: BOOKING
+   type: hdb
+   path: BOOKING
+   requires:
+    - name: hdi_BOOKING
+      properties:
+        TARGET_CONTAINER: ~{hdi-container-name}
+
+
+
+    - name: cross-container-service-1
+      group: SERVICE_REPLACEMENTS
+
+      properties:
+        key: ServiceName_1
+        service: ~{the-service-name}
+                          
+
+
+
+    - name: cross-container-service-2
+      group: SERVICE_REPLACEMENTS
+
+      properties:
+        key: ServiceName_2
+        service: ~{the-service-name}
+                          
+
+
+
+    - name: cross-container-service-3
+      group: SERVICE_REPLACEMENTS
+
+      properties:
+        key: ServiceName_3
+        service: ~{the-service-name}
+                          
+
+
+
+    - name: cross-container-service-4
+      group: SERVICE_REPLACEMENTS
+
+      properties:
+        key: ServiceName_4
+        service: ~{the-service-name}
+                          
+
+
+resources:
+ - name: hdi_BOOKING
+   parameters:
+      config:
+         schema: VEBS
+   properties:
+      hdi-container-name: ${service-name}
+   type: com.sap.xs.hdi-container
+
+ - name: cross-container-service-1
+   parameters:
+      service-name: vebs-grant
+   properties:
+      the-service-name: ${service-name}
+   type: org.cloudfoundry.existing-service
+
+
+ - name: cross-container-service-2
+   parameters:
+      service-name: vebs-grant
+   properties:
+      the-service-name: ${service-name}
+   type: org.cloudfoundry.existing-service
+
+
+ - name: cross-container-service-3
+   parameters:
+      service-name: vebs-grant
+   properties:
+      the-service-name: ${service-name}
+   type: org.cloudfoundry.existing-service
+
+
+ - name: cross-container-service-4
+   parameters:
+      service-name: vebs-grant1
+   properties:
+      the-service-name: ${service-name}
+   type: org.cloudfoundry.existing-service
+

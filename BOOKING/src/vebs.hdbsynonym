@@ -1,0 +1,8 @@
+{
+  "EDW.BOOKING::XXVM_BOOKING_BI_EXTRACT": {
+    "target": {
+      "object": "XXVM_BOOKING_BI_EXTRACT",
+      "schema": "VEBS"
+    }
+  }
+}

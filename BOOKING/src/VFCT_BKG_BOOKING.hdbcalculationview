@@ -1,0 +1,2011 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Calculation:scenario xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" id="EDW.BOOKING::VFCT_BKG_BOOKING" applyPrivilegeType="NONE" dataCategory="CUBE" schemaVersion="3.0" outputViewType="Aggregation" cacheInvalidationPeriod="NONE" enforceSqlExecution="false">
+<descriptions defaultDescription="VFCT_BKG_BOOKING"/>
+<localVariables/>
+<variableMappings/>
+<dataSources>
+  <DataSource id="EDW.BOOKING::XXVM_BOOKING_BI_EXTRACT">
+    <resourceUri>EDW.BOOKING::XXVM_BOOKING_BI_EXTRACT</resourceUri>
+  </DataSource>
+</dataSources>
+<calculationViews>
+  <calculationView xsi:type="Calculation:ProjectionView" id="Projection_1">
+    <viewAttributes>
+      <viewAttribute id="EXTRACT_ID">
+        <descriptions defaultDescription="EXTRACT_ID"/>
+      </viewAttribute>
+      <viewAttribute id="BOOKING_HEADER_ID">
+        <descriptions defaultDescription="BOOKING_HEADER_ID"/>
+      </viewAttribute>
+      <viewAttribute id="BOOKING_LINE_ID">
+        <descriptions defaultDescription="BOOKING_LINE_ID"/>
+      </viewAttribute>
+      <viewAttribute id="BOOKING_DISTRIBUTION_ID">
+        <descriptions defaultDescription="BOOKING_DISTRIBUTION_ID"/>
+      </viewAttribute>
+      <viewAttribute id="BOOKING_MISC_ID">
+        <descriptions defaultDescription="BOOKING_MISC_ID"/>
+      </viewAttribute>
+      <viewAttribute id="ID">
+        <descriptions defaultDescription="ID"/>
+      </viewAttribute>
+      <viewAttribute id="ORDERID">
+        <descriptions defaultDescription="ORDERID"/>
+      </viewAttribute>
+      <viewAttribute id="HEADER_SOURCE">
+        <descriptions defaultDescription="HEADER_SOURCE"/>
+      </viewAttribute>
+      <viewAttribute id="ORDERDATE">
+        <descriptions defaultDescription="ORDERDATE"/>
+      </viewAttribute>
+      <viewAttribute id="BILLTOORGANIZATION">
+        <descriptions defaultDescription="BILLTOORGANIZATION"/>
+      </viewAttribute>
+      <viewAttribute id="BILLTOISOCOUNTRYCODE">
+        <descriptions defaultDescription="BILLTOISOCOUNTRYCODE"/>
+      </viewAttribute>
+      <viewAttribute id="BILLTOSTATE">
+        <descriptions defaultDescription="BILLTOSTATE"/>
+      </viewAttribute>
+      <viewAttribute id="BILLTOZIP">
+        <descriptions defaultDescription="BILLTOZIP"/>
+      </viewAttribute>
+      <viewAttribute id="SHIPTOORGANIZATION">
+        <descriptions defaultDescription="SHIPTOORGANIZATION"/>
+      </viewAttribute>
+      <viewAttribute id="SHIPTOISOCOUNTRYCODE">
+        <descriptions defaultDescription="SHIPTOISOCOUNTRYCODE"/>
+      </viewAttribute>
+      <viewAttribute id="SHIPTOSTATE">
+        <descriptions defaultDescription="SHIPTOSTATE"/>
+      </viewAttribute>
+      <viewAttribute id="SHIPTOZIP">
+        <descriptions defaultDescription="SHIPTOZIP"/>
+      </viewAttribute>
+      <viewAttribute id="ENDUSERISOCOUNTRYCODE">
+        <descriptions defaultDescription="ENDUSERISOCOUNTRYCODE"/>
+      </viewAttribute>
+      <viewAttribute id="ENDUSERSTATE">
+        <descriptions defaultDescription="ENDUSERSTATE"/>
+      </viewAttribute>
+      <viewAttribute id="ENDUSERZIP">
+        <descriptions defaultDescription="ENDUSERZIP"/>
+      </viewAttribute>
+      <viewAttribute id="ENDUSERORGANIZATION">
+        <descriptions defaultDescription="ENDUSERORGANIZATION"/>
+      </viewAttribute>
+      <viewAttribute id="CURRENCY">
+        <descriptions defaultDescription="CURRENCY"/>
+      </viewAttribute>
+      <viewAttribute id="EMAILADDRESS">
+        <descriptions defaultDescription="EMAILADDRESS"/>
+      </viewAttribute>
+      <viewAttribute id="PHONENUMBER">
+        <descriptions defaultDescription="PHONENUMBER"/>
+      </viewAttribute>
+      <viewAttribute id="ETM_TERRITORY_FLAG">
+        <descriptions defaultDescription="ETM_TERRITORY_FLAG"/>
+      </viewAttribute>
+      <viewAttribute id="AUTO_ADJUSTMENTS_APPLIED_FLAG">
+        <descriptions defaultDescription="AUTO_ADJUSTMENTS_APPLIED_FLAG"/>
+      </viewAttribute>
+      <viewAttribute id="DELETED_FLAG">
+        <descriptions defaultDescription="DELETED_FLAG"/>
+      </viewAttribute>
+      <viewAttribute id="REBATE_FLAG">
+        <descriptions defaultDescription="REBATE_FLAG"/>
+      </viewAttribute>
+      <viewAttribute id="HEADERTOTAL">
+        <descriptions defaultDescription="HEADERTOTAL"/>
+      </viewAttribute>
+      <viewAttribute id="PRICE">
+        <descriptions defaultDescription="PRICE"/>
+      </viewAttribute>
+      <viewAttribute id="DETAILTOTAL">
+        <descriptions defaultDescription="DETAILTOTAL"/>
+      </viewAttribute>
+      <viewAttribute id="ENTEREDBY">
+        <descriptions defaultDescription="ENTEREDBY"/>
+      </viewAttribute>
+      <viewAttribute id="LASTNAME">
+        <descriptions defaultDescription="LASTNAME"/>
+      </viewAttribute>
+      <viewAttribute id="COMMENTS">
+        <descriptions defaultDescription="COMMENTS"/>
+      </viewAttribute>
+      <viewAttribute id="HARDWARE">
+        <descriptions defaultDescription="HARDWARE"/>
+      </viewAttribute>
+      <viewAttribute id="RESELLER">
+        <descriptions defaultDescription="RESELLER"/>
+      </viewAttribute>
+      <viewAttribute id="SERIALNUMDELIVEREMAIL">
+        <descriptions defaultDescription="SERIALNUMDELIVEREMAIL"/>
+      </viewAttribute>
+      <viewAttribute id="ORDERLINEID">
+        <descriptions defaultDescription="ORDERLINEID"/>
+      </viewAttribute>
+      <viewAttribute id="WEEK">
+        <descriptions defaultDescription="WEEK"/>
+      </viewAttribute>
+      <viewAttribute id="MONTH">
+        <descriptions defaultDescription="MONTH"/>
+      </viewAttribute>
+      <viewAttribute id="QTR">
+        <descriptions defaultDescription="QTR"/>
+      </viewAttribute>
+      <viewAttribute id="CHANNEL">
+        <descriptions defaultDescription="CHANNEL"/>
+      </viewAttribute>
+      <viewAttribute id="CLASS">
+        <descriptions defaultDescription="CLASS"/>
+      </viewAttribute>
+      <viewAttribute id="PRODUCT">
+        <descriptions defaultDescription="PRODUCT"/>
+      </viewAttribute>
+      <viewAttribute id="PLATFORM">
+        <descriptions defaultDescription="PLATFORM"/>
+      </viewAttribute>
+      <viewAttribute id="USAGE">
+        <descriptions defaultDescription="USAGE"/>
+      </viewAttribute>
+      <viewAttribute id="MEDIA">
+        <descriptions defaultDescription="MEDIA"/>
+      </viewAttribute>
+      <viewAttribute id="ALLIANCE">
+        <descriptions defaultDescription="ALLIANCE"/>
+      </viewAttribute>
+      <viewAttribute id="CHANREG">
+        <descriptions defaultDescription="CHANREG"/>
+      </viewAttribute>
+      <viewAttribute id="BUNDLE">
+        <descriptions defaultDescription="BUNDLE"/>
+      </viewAttribute>
+      <viewAttribute id="CMO">
+        <descriptions defaultDescription="CMO"/>
+      </viewAttribute>
+      <viewAttribute id="RESELLERCALC">
+        <descriptions defaultDescription="RESELLERCALC"/>
+      </viewAttribute>
+      <viewAttribute id="PRODUCTSUMIF">
+        <descriptions defaultDescription="PRODUCTSUMIF"/>
+      </viewAttribute>
+      <viewAttribute id="TERRITORY2">
+        <descriptions defaultDescription="TERRITORY2"/>
+      </viewAttribute>
+      <viewAttribute id="LISTPRICE">
+        <descriptions defaultDescription="LISTPRICE"/>
+      </viewAttribute>
+      <viewAttribute id="EXTLISTPRICE">
+        <descriptions defaultDescription="EXTLISTPRICE"/>
+      </viewAttribute>
+      <viewAttribute id="OEMMONTH">
+        <descriptions defaultDescription="OEMMONTH"/>
+      </viewAttribute>
+      <viewAttribute id="LASTRUNDATE">
+        <descriptions defaultDescription="LASTRUNDATE"/>
+      </viewAttribute>
+      <viewAttribute id="SNSMONTHS">
+        <descriptions defaultDescription="SNSMONTHS"/>
+      </viewAttribute>
+      <viewAttribute id="SELLINGPRICE">
+        <descriptions defaultDescription="SELLINGPRICE"/>
+      </viewAttribute>
+      <viewAttribute id="DISC_TOTAL_LIST_PRICE">
+        <descriptions defaultDescription="DISC_TOTAL_LIST_PRICE"/>
+      </viewAttribute>
+      <viewAttribute id="RESELLERLEVEL">
+        <descriptions defaultDescription="RESELLERLEVEL"/>
+      </viewAttribute>
+      <viewAttribute id="VPPDISCOUNT">
+        <descriptions defaultDescription="VPPDISCOUNT"/>
+      </viewAttribute>
+      <viewAttribute id="SPFDISCOUNT">
+        <descriptions defaultDescription="SPFDISCOUNT"/>
+      </viewAttribute>
+      <viewAttribute id="ELA">
+        <descriptions defaultDescription="ELA"/>
+      </viewAttribute>
+      <viewAttribute id="ORAN">
+        <descriptions defaultDescription="ORAN"/>
+      </viewAttribute>
+      <viewAttribute id="PSOPROJECTCODE">
+        <descriptions defaultDescription="PSOPROJECTCODE"/>
+      </viewAttribute>
+      <viewAttribute id="REVENUEQTR">
+        <descriptions defaultDescription="REVENUEQTR"/>
+      </viewAttribute>
+      <viewAttribute id="SHIPDATE">
+        <descriptions defaultDescription="SHIPDATE"/>
+      </viewAttribute>
+      <viewAttribute id="CHANNELGROUP">
+        <descriptions defaultDescription="CHANNELGROUP"/>
+      </viewAttribute>
+      <viewAttribute id="ORANNUMBER">
+        <descriptions defaultDescription="ORANNUMBER"/>
+      </viewAttribute>
+      <viewAttribute id="PARTNERID">
+        <descriptions defaultDescription="PARTNERID"/>
+      </viewAttribute>
+      <viewAttribute id="SOURCE">
+        <descriptions defaultDescription="SOURCE"/>
+      </viewAttribute>
+      <viewAttribute id="PHOENIXID">
+        <descriptions defaultDescription="PHOENIXID"/>
+      </viewAttribute>
+      <viewAttribute id="ELACAP">
+        <descriptions defaultDescription="ELACAP"/>
+      </viewAttribute>
+      <viewAttribute id="NAMREP">
+        <descriptions defaultDescription="NAMREP"/>
+      </viewAttribute>
+      <viewAttribute id="NAMEDPARTNER">
+        <descriptions defaultDescription="NAMEDPARTNER"/>
+      </viewAttribute>
+      <viewAttribute id="ORDERIDPM">
+        <descriptions defaultDescription="ORDERIDPM"/>
+      </viewAttribute>
+      <viewAttribute id="GLNATURALACCOUNT">
+        <descriptions defaultDescription="GLNATURALACCOUNT"/>
+      </viewAttribute>
+      <viewAttribute id="GLCOMPANY">
+        <descriptions defaultDescription="GLCOMPANY"/>
+      </viewAttribute>
+      <viewAttribute id="GLPRODUCT">
+        <descriptions defaultDescription="GLPRODUCT"/>
+      </viewAttribute>
+      <viewAttribute id="PRICELC">
+        <descriptions defaultDescription="PRICELC"/>
+      </viewAttribute>
+      <viewAttribute id="DETAILTOTALLC">
+        <descriptions defaultDescription="DETAILTOTALLC"/>
+      </viewAttribute>
+      <viewAttribute id="HEADERTOTALLC">
+        <descriptions defaultDescription="HEADERTOTALLC"/>
+      </viewAttribute>
+      <viewAttribute id="LISTPRICELC">
+        <descriptions defaultDescription="LISTPRICELC"/>
+      </viewAttribute>
+      <viewAttribute id="EXTLISTPRICELC">
+        <descriptions defaultDescription="EXTLISTPRICELC"/>
+      </viewAttribute>
+      <viewAttribute id="PRICEUSD">
+        <descriptions defaultDescription="PRICEUSD"/>
+      </viewAttribute>
+      <viewAttribute id="DETAILTOTALUSD">
+        <descriptions defaultDescription="DETAILTOTALUSD"/>
+      </viewAttribute>
+      <viewAttribute id="HEADERTOTALUSD">
+        <descriptions defaultDescription="HEADERTOTALUSD"/>
+      </viewAttribute>
+      <viewAttribute id="LISTPRICEUSD">
+        <descriptions defaultDescription="LISTPRICEUSD"/>
+      </viewAttribute>
+      <viewAttribute id="EXTLISTPRICEUSD">
+        <descriptions defaultDescription="EXTLISTPRICEUSD"/>
+      </viewAttribute>
+      <viewAttribute id="BU">
+        <descriptions defaultDescription="BU"/>
+      </viewAttribute>
+      <viewAttribute id="CLASSOFTRADE">
+        <descriptions defaultDescription="CLASSOFTRADE"/>
+      </viewAttribute>
+      <viewAttribute id="QUANTITY2">
+        <descriptions defaultDescription="QUANTITY2"/>
+      </viewAttribute>
+      <viewAttribute id="EBS_HEADER_ID">
+        <descriptions defaultDescription="EBS_HEADER_ID"/>
+      </viewAttribute>
+      <viewAttribute id="EBS_LINE_ID">
+        <descriptions defaultDescription="EBS_LINE_ID"/>
+      </viewAttribute>
+      <viewAttribute id="LASTUPDATEDATE">
+        <descriptions defaultDescription="LASTUPDATEDATE"/>
+      </viewAttribute>
+      <viewAttribute id="DETAILTOTALCONSTANTCUR">
+        <descriptions defaultDescription="DETAILTOTALCONSTANTCUR"/>
+      </viewAttribute>
+      <viewAttribute id="DETAILTOTALCONSTANTPLAN">
+        <descriptions defaultDescription="DETAILTOTALCONSTANTPLAN"/>
+      </viewAttribute>
+      <viewAttribute id="GEO">
+        <descriptions defaultDescription="GEO"/>
+      </viewAttribute>
+      <viewAttribute id="REGION">
+        <descriptions defaultDescription="REGION"/>
+      </viewAttribute>
+      <viewAttribute id="SUBREGION">
+        <descriptions defaultDescription="SUBREGION"/>
+      </viewAttribute>
+      <viewAttribute id="TERRITORY">
+        <descriptions defaultDescription="TERRITORY"/>
+      </viewAttribute>
+      <viewAttribute id="GEOTJ">
+        <descriptions defaultDescription="GEOTJ"/>
+      </viewAttribute>
+      <viewAttribute id="REGIONTJ">
+        <descriptions defaultDescription="REGIONTJ"/>
+      </viewAttribute>
+      <viewAttribute id="SUBREGIONTJ">
+        <descriptions defaultDescription="SUBREGIONTJ"/>
+      </viewAttribute>
+      <viewAttribute id="TERRITORYTJ">
+        <descriptions defaultDescription="TERRITORYTJ"/>
+      </viewAttribute>
+      <viewAttribute id="SPRINGSOURCEREP">
+        <descriptions defaultDescription="SPRINGSOURCEREP"/>
+      </viewAttribute>
+      <viewAttribute id="SSMREP">
+        <descriptions defaultDescription="SSMREP"/>
+      </viewAttribute>
+      <viewAttribute id="DIRECTREP">
+        <descriptions defaultDescription="DIRECTREP"/>
+      </viewAttribute>
+      <viewAttribute id="PARTNERREP">
+        <descriptions defaultDescription="PARTNERREP"/>
+      </viewAttribute>
+      <viewAttribute id="SIREP">
+        <descriptions defaultDescription="SIREP"/>
+      </viewAttribute>
+      <viewAttribute id="DIRECTREP_CAM_SE">
+        <descriptions defaultDescription="DIRECTREP_CAM_SE"/>
+      </viewAttribute>
+      <viewAttribute id="GAMREP">
+        <descriptions defaultDescription="GAMREP"/>
+      </viewAttribute>
+      <viewAttribute id="PARTNERREP2">
+        <descriptions defaultDescription="PARTNERREP2"/>
+      </viewAttribute>
+      <viewAttribute id="FSIREP">
+        <descriptions defaultDescription="FSIREP"/>
+      </viewAttribute>
+      <viewAttribute id="GEMSTONEREP">
+        <descriptions defaultDescription="GEMSTONEREP"/>
+      </viewAttribute>
+      <viewAttribute id="ZIMBRAREP">
+        <descriptions defaultDescription="ZIMBRAREP"/>
+      </viewAttribute>
+      <viewAttribute id="GSSMREP">
+        <descriptions defaultDescription="GSSMREP"/>
+      </viewAttribute>
+      <viewAttribute id="ENTMGMTREP">
+        <descriptions defaultDescription="ENTMGMTREP"/>
+      </viewAttribute>
+      <viewAttribute id="PROCESS_FLAG">
+        <descriptions defaultDescription="PROCESS_FLAG"/>
+      </viewAttribute>
+      <viewAttribute id="ERROR_MESSAGE">
+        <descriptions defaultDescription="ERROR_MESSAGE"/>
+      </viewAttribute>
+      <viewAttribute id="ATTRIBUTE1">
+        <descriptions defaultDescription="ATTRIBUTE1"/>
+      </viewAttribute>
+      <viewAttribute id="ATTRIBUTE2">
+        <descriptions defaultDescription="ATTRIBUTE2"/>
+      </viewAttribute>
+      <viewAttribute id="ATTRIBUTE3">
+        <descriptions defaultDescription="ATTRIBUTE3"/>
+      </viewAttribute>
+      <viewAttribute id="CREATED_BY">
+        <descriptions defaultDescription="CREATED_BY"/>
+      </viewAttribute>
+      <viewAttribute id="CREATION_DATE">
+        <descriptions defaultDescription="CREATION_DATE"/>
+      </viewAttribute>
+      <viewAttribute id="LAST_UPDATED_BY">
+        <descriptions defaultDescription="LAST_UPDATED_BY"/>
+      </viewAttribute>
+      <viewAttribute id="LAST_UPDATE_DATE">
+        <descriptions defaultDescription="LAST_UPDATE_DATE"/>
+      </viewAttribute>
+      <viewAttribute id="LAST_UPDATE_LOGIN">
+        <descriptions defaultDescription="LAST_UPDATE_LOGIN"/>
+      </viewAttribute>
+      <viewAttribute id="TRX_MODIFIER">
+        <descriptions defaultDescription="TRX_MODIFIER"/>
+      </viewAttribute>
+      <viewAttribute id="ACTIVATION_POOL_NUM">
+        <descriptions defaultDescription="ACTIVATION_POOL_NUM"/>
+      </viewAttribute>
+      <viewAttribute id="LINK_TO_BOOKING_LINE_ID">
+        <descriptions defaultDescription="LINK_TO_BOOKING_LINE_ID"/>
+      </viewAttribute>
+      <viewAttribute id="ORIGINAL_TRX_NUMBER">
+        <descriptions defaultDescription="ORIGINAL_TRX_NUMBER"/>
+      </viewAttribute>
+      <viewAttribute id="TRX_TYPE">
+        <descriptions defaultDescription="TRX_TYPE"/>
+      </viewAttribute>
+      <viewAttribute id="EXCLUDE_FOR_COMMISSION">
+        <descriptions defaultDescription="EXCLUDE_FOR_COMMISSION"/>
+      </viewAttribute>
+      <viewAttribute id="COMM_CREDIT_DATE">
+        <descriptions defaultDescription="COMM_CREDIT_DATE"/>
+      </viewAttribute>
+      <viewAttribute id="DISTRIBUTION_TYPE">
+        <descriptions defaultDescription="DISTRIBUTION_TYPE"/>
+      </viewAttribute>
+      <viewAttribute id="VSPP_REP">
+        <descriptions defaultDescription="VSPP_REP"/>
+      </viewAttribute>
+      <viewAttribute id="DIGITALFUEL_REP">
+        <descriptions defaultDescription="DIGITALFUEL_REP"/>
+      </viewAttribute>
+      <viewAttribute id="SOCIALCAST_REP">
+        <descriptions defaultDescription="SOCIALCAST_REP"/>
+      </viewAttribute>
+      <viewAttribute id="PARTNER_REP3">
+        <descriptions defaultDescription="PARTNER_REP3"/>
+      </viewAttribute>
+      <viewAttribute id="SHAVLIK_REP">
+        <descriptions defaultDescription="SHAVLIK_REP"/>
+      </viewAttribute>
+      <viewAttribute id="PO_NUMBER">
+        <descriptions defaultDescription="PO_NUMBER"/>
+      </viewAttribute>
+      <viewAttribute id="BILLTO_ADDRESS_DUNS">
+        <descriptions defaultDescription="BILLTO_ADDRESS_DUNS"/>
+      </viewAttribute>
+      <viewAttribute id="SHIPTO_ADDRESS_DUNS">
+        <descriptions defaultDescription="SHIPTO_ADDRESS_DUNS"/>
+      </viewAttribute>
+      <viewAttribute id="ENDUSER_ADDRESS_DUNS">
+        <descriptions defaultDescription="ENDUSER_ADDRESS_DUNS"/>
+      </viewAttribute>
+      <viewAttribute id="RESELLER_ADDRESS_DUNS">
+        <descriptions defaultDescription="RESELLER_ADDRESS_DUNS"/>
+      </viewAttribute>
+      <viewAttribute id="BILLTO_ADDRESS_EA_NUMBER">
+        <descriptions defaultDescription="BILLTO_ADDRESS_EA_NUMBER"/>
+      </viewAttribute>
+      <viewAttribute id="SHIPTO_ADDRESS_EA_NUMBER">
+        <descriptions defaultDescription="SHIPTO_ADDRESS_EA_NUMBER"/>
+      </viewAttribute>
+      <viewAttribute id="ENDUSER_ADDRESS_EA_NUMBER">
+        <descriptions defaultDescription="ENDUSER_ADDRESS_EA_NUMBER"/>
+      </viewAttribute>
+      <viewAttribute id="RESELLER_ADDRESS_EA_NUMBER">
+        <descriptions defaultDescription="RESELLER_ADDRESS_EA_NUMBER"/>
+      </viewAttribute>
+      <viewAttribute id="BILLTO_ADDRESS_UUID">
+        <descriptions defaultDescription="BILLTO_ADDRESS_UUID"/>
+      </viewAttribute>
+      <viewAttribute id="SHIPTO_ADDRESS_UUID">
+        <descriptions defaultDescription="SHIPTO_ADDRESS_UUID"/>
+      </viewAttribute>
+      <viewAttribute id="ENDUSER_ADDRESS_UUID">
+        <descriptions defaultDescription="ENDUSER_ADDRESS_UUID"/>
+      </viewAttribute>
+      <viewAttribute id="RESELLER_ADDRESS_UUID">
+        <descriptions defaultDescription="RESELLER_ADDRESS_UUID"/>
+      </viewAttribute>
+      <viewAttribute id="TERRITORY_ID">
+        <descriptions defaultDescription="TERRITORY_ID"/>
+      </viewAttribute>
+      <viewAttribute id="TERRITORY_ID_BOOK">
+        <descriptions defaultDescription="TERRITORY_ID_BOOK"/>
+      </viewAttribute>
+      <viewAttribute id="SOLD_TO_EMAIL_ADDRESS">
+        <descriptions defaultDescription="SOLD_TO_EMAIL_ADDRESS"/>
+      </viewAttribute>
+      <viewAttribute id="BILLTO_CUSTOMER_ID">
+        <descriptions defaultDescription="BILLTO_CUSTOMER_ID"/>
+      </viewAttribute>
+      <viewAttribute id="SHIPTO_CUSTOMER_ID">
+        <descriptions defaultDescription="SHIPTO_CUSTOMER_ID"/>
+      </viewAttribute>
+      <viewAttribute id="ENDUSER_CUSTOMER_ID">
+        <descriptions defaultDescription="ENDUSER_CUSTOMER_ID"/>
+      </viewAttribute>
+      <viewAttribute id="RESELLER_CUSTOMER_ID">
+        <descriptions defaultDescription="RESELLER_CUSTOMER_ID"/>
+      </viewAttribute>
+      <viewAttribute id="BILLTO_CUST_NUMBER">
+        <descriptions defaultDescription="BILLTO_CUST_NUMBER"/>
+      </viewAttribute>
+      <viewAttribute id="SHIPTO_CUST_NUMBER">
+        <descriptions defaultDescription="SHIPTO_CUST_NUMBER"/>
+      </viewAttribute>
+      <viewAttribute id="ENDUSER_CUST_NUMBER">
+        <descriptions defaultDescription="ENDUSER_CUST_NUMBER"/>
+      </viewAttribute>
+      <viewAttribute id="RESELLER_CUST_NUMBER">
+        <descriptions defaultDescription="RESELLER_CUST_NUMBER"/>
+      </viewAttribute>
+      <viewAttribute id="TENANT_SERVICE_INSTANCE_ID">
+        <descriptions defaultDescription="TENANT_SERVICE_INSTANCE_ID"/>
+      </viewAttribute>
+      <viewAttribute id="SDP_LINE_TYPE">
+        <descriptions defaultDescription="SDP_LINE_TYPE"/>
+      </viewAttribute>
+      <viewAttribute id="DISTRIBUTOR_REP">
+        <descriptions defaultDescription="DISTRIBUTOR_REP"/>
+      </viewAttribute>
+      <viewAttribute id="VCHS_REP">
+        <descriptions defaultDescription="VCHS_REP"/>
+      </viewAttribute>
+      <viewAttribute id="CLOUD_MGMT_REP">
+        <descriptions defaultDescription="CLOUD_MGMT_REP"/>
+      </viewAttribute>
+      <viewAttribute id="HEADER_CREATION_DATE">
+        <descriptions defaultDescription="HEADER_CREATION_DATE"/>
+      </viewAttribute>
+      <viewAttribute id="HEADER_LAST_UPDATE_DATE">
+        <descriptions defaultDescription="HEADER_LAST_UPDATE_DATE"/>
+      </viewAttribute>
+      <viewAttribute id="LINE_CREATION_DATE">
+        <descriptions defaultDescription="LINE_CREATION_DATE"/>
+      </viewAttribute>
+      <viewAttribute id="LINE_LAST_UPDATE_DATE">
+        <descriptions defaultDescription="LINE_LAST_UPDATE_DATE"/>
+      </viewAttribute>
+      <viewAttribute id="DIST_CREATION_DATE">
+        <descriptions defaultDescription="DIST_CREATION_DATE"/>
+      </viewAttribute>
+      <viewAttribute id="DIST_LAST_UPDATE_DATE">
+        <descriptions defaultDescription="DIST_LAST_UPDATE_DATE"/>
+      </viewAttribute>
+      <viewAttribute id="SDP_OFFERING_TYPE">
+        <descriptions defaultDescription="SDP_OFFERING_TYPE"/>
+      </viewAttribute>
+      <viewAttribute id="SELLING_TRANSACTION_TYPE">
+        <descriptions defaultDescription="SELLING_TRANSACTION_TYPE"/>
+      </viewAttribute>
+      <viewAttribute id="VSPP_EXTERNAL_SKU">
+        <descriptions defaultDescription="VSPP_EXTERNAL_SKU"/>
+      </viewAttribute>
+      <viewAttribute id="VSPP_LINE_TYPE">
+        <descriptions defaultDescription="VSPP_LINE_TYPE"/>
+      </viewAttribute>
+      <viewAttribute id="EXTERNAL_CONTRACT_ID">
+        <descriptions defaultDescription="EXTERNAL_CONTRACT_ID"/>
+      </viewAttribute>
+      <viewAttribute id="VSPP_CONTRACT_TYPE">
+        <descriptions defaultDescription="VSPP_CONTRACT_TYPE"/>
+      </viewAttribute>
+      <viewAttribute id="ORIGINAL_SNSMONTHS">
+        <descriptions defaultDescription="ORIGINAL_SNSMONTHS"/>
+      </viewAttribute>
+      <viewAttribute id="ITCV_DETAIL_TOTAL">
+        <descriptions defaultDescription="ITCV_DETAIL_TOTAL"/>
+      </viewAttribute>
+      <viewAttribute id="ITCV_DETAIL_TOTAL_LC">
+        <descriptions defaultDescription="ITCV_DETAIL_TOTAL_LC"/>
+      </viewAttribute>
+      <viewAttribute id="ACV_INSTALLMENT_NUMBER">
+        <descriptions defaultDescription="ACV_INSTALLMENT_NUMBER"/>
+      </viewAttribute>
+      <viewAttribute id="ALLIANCE_TYPE">
+        <descriptions defaultDescription="ALLIANCE_TYPE"/>
+      </viewAttribute>
+      <viewAttribute id="DW_LOAD_DATE">
+        <descriptions defaultDescription="DW_LOAD_DATE"/>
+      </viewAttribute>
+      <viewAttribute id="HEADER_TOTAL_CC">
+        <descriptions defaultDescription="HEADER_TOTAL_CC"/>
+      </viewAttribute>
+      <viewAttribute id="DETAIL_TOTAL_PRV_HLF_CC">
+        <descriptions defaultDescription="DETAIL_TOTAL_PRV_HLF_CC"/>
+      </viewAttribute>
+      <viewAttribute id="PRODUCTID">
+        <descriptions defaultDescription="PRODUCTID"/>
+      </viewAttribute>
+      <viewAttribute id="BUNDLESKU">
+        <descriptions defaultDescription="BUNDLESKU"/>
+      </viewAttribute>
+      <viewAttribute id="GEOTJ_RPT">
+        <descriptions defaultDescription="GEOTJ_RPT"/>
+      </viewAttribute>
+      <viewAttribute id="REGIONTJ_RPT">
+        <descriptions defaultDescription="REGIONTJ_RPT"/>
+      </viewAttribute>
+      <viewAttribute id="SUBREGIONTJ_RPT">
+        <descriptions defaultDescription="SUBREGIONTJ_RPT"/>
+      </viewAttribute>
+      <viewAttribute id="DIRECTREP_RPT">
+        <descriptions defaultDescription="DIRECTREP_RPT"/>
+      </viewAttribute>
+      <viewAttribute id="BOOKING_ADJUSTED_DATE">
+        <descriptions defaultDescription="BOOKING_ADJUSTED_DATE"/>
+      </viewAttribute>
+      <viewAttribute id="LAUNCHED_GEO">
+        <descriptions defaultDescription="LAUNCHED_GEO"/>
+      </viewAttribute>
+      <viewAttribute id="LAUNCHED_REGION">
+        <descriptions defaultDescription="LAUNCHED_REGION"/>
+      </viewAttribute>
+      <viewAttribute id="LAUNCHED_SUBREGION">
+        <descriptions defaultDescription="LAUNCHED_SUBREGION"/>
+      </viewAttribute>
+      <viewAttribute id="LAUNCHED_TERRITORY">
+        <descriptions defaultDescription="LAUNCHED_TERRITORY"/>
+      </viewAttribute>
+      <viewAttribute id="LANDED_GEO">
+        <descriptions defaultDescription="LANDED_GEO"/>
+      </viewAttribute>
+      <viewAttribute id="LANDED_REGION">
+        <descriptions defaultDescription="LANDED_REGION"/>
+      </viewAttribute>
+      <viewAttribute id="LANDED_SUBREGION">
+        <descriptions defaultDescription="LANDED_SUBREGION"/>
+      </viewAttribute>
+      <viewAttribute id="LANDED_TERRITORY">
+        <descriptions defaultDescription="LANDED_TERRITORY"/>
+      </viewAttribute>
+      <viewAttribute id="PRODUCT_DIVISION">
+        <descriptions defaultDescription="PRODUCT_DIVISION"/>
+      </viewAttribute>
+      <viewAttribute id="PRODUCT_GROUP">
+        <descriptions defaultDescription="PRODUCT_GROUP"/>
+      </viewAttribute>
+      <viewAttribute id="PLATFORM_GROUP">
+        <descriptions defaultDescription="PLATFORM_GROUP"/>
+      </viewAttribute>
+      <viewAttribute id="PRODUCT_PLATFORM">
+        <descriptions defaultDescription="PRODUCT_PLATFORM"/>
+      </viewAttribute>
+      <viewAttribute id="CURRENT_QTR_IND">
+        <descriptions defaultDescription="CURRENT_QTR_IND"/>
+      </viewAttribute>
+      <viewAttribute id="DISTI_GEO">
+        <descriptions defaultDescription="DISTI_GEO"/>
+      </viewAttribute>
+      <viewAttribute id="DISTI_REGION">
+        <descriptions defaultDescription="DISTI_REGION"/>
+      </viewAttribute>
+      <viewAttribute id="DISTI_SUBREGION">
+        <descriptions defaultDescription="DISTI_SUBREGION"/>
+      </viewAttribute>
+      <viewAttribute id="DISTI_TERRITORY">
+        <descriptions defaultDescription="DISTI_TERRITORY"/>
+      </viewAttribute>
+      <viewAttribute id="DELL_ALLIANCE">
+        <descriptions defaultDescription="DELL_ALLIANCE"/>
+      </viewAttribute>
+      <viewAttribute id="DELL_BILLTOORGANIZATION">
+        <descriptions defaultDescription="DELL_BILLTOORGANIZATION"/>
+      </viewAttribute>
+      <viewAttribute id="DELL_ENDUSERORGANIZATION">
+        <descriptions defaultDescription="DELL_ENDUSERORGANIZATION"/>
+      </viewAttribute>
+      <viewAttribute id="QUANTITY">
+        <descriptions defaultDescription="QUANTITY"/>
+      </viewAttribute>
+      <viewAttribute id="ITCV_DETAIL_TOTAL_DRVD">
+        <descriptions defaultDescription="ITCV_DETAIL_TOTAL_DRVD"/>
+      </viewAttribute>
+      <viewAttribute id="CUSTOMER_SEGMENT">
+        <descriptions defaultDescription="CUSTOMER_SEGMENT"/>
+      </viewAttribute>
+      <viewAttribute id="VCA_FLAG">
+        <descriptions defaultDescription="VCA_FLAG"/>
+      </viewAttribute>
+      <viewAttribute id="DETAIL_TOTAL_CONSTANT_CUR_IR">
+        <descriptions defaultDescription="DETAIL_TOTAL_CONSTANT_CUR_IR"/>
+      </viewAttribute>
+      <viewAttribute id="FPA_MARKET_TYPE">
+        <descriptions defaultDescription="FPA_MARKET_TYPE"/>
+      </viewAttribute>
+      <viewAttribute id="VCPP_PREPAY_FLAG">
+        <descriptions defaultDescription="VCPP_PREPAY_FLAG"/>
+      </viewAttribute>
+      <viewAttribute id="CLOUD_CREDIT_ORDER">
+        <descriptions defaultDescription="CLOUD_CREDIT_ORDER"/>
+      </viewAttribute>
+      <viewAttribute id="EXTERNAL_CONTRACT_NUMBER">
+        <descriptions defaultDescription="EXTERNAL_CONTRACT_NUMBER"/>
+      </viewAttribute>
+      <viewAttribute id="PAYMENT_TERM">
+        <descriptions defaultDescription="PAYMENT_TERM"/>
+      </viewAttribute>
+      <viewAttribute id="EFFECTIVE_FULL_DURATION">
+        <descriptions defaultDescription="EFFECTIVE_FULL_DURATION"/>
+      </viewAttribute>
+      <viewAttribute id="USAGE_PERIOD">
+        <descriptions defaultDescription="USAGE_PERIOD"/>
+      </viewAttribute>
+      <viewAttribute id="GEORPT">
+        <descriptions defaultDescription="GEORPT"/>
+      </viewAttribute>
+      <viewAttribute id="REGIONRPT">
+        <descriptions defaultDescription="REGIONRPT"/>
+      </viewAttribute>
+      <viewAttribute id="SUBREGIONRPT">
+        <descriptions defaultDescription="SUBREGIONRPT"/>
+      </viewAttribute>
+      <viewAttribute id="TERRITORYRPT">
+        <descriptions defaultDescription="TERRITORYRPT"/>
+      </viewAttribute>
+      <viewAttribute id="ADJ_DATE">
+        <descriptions defaultDescription="ADJ_DATE"/>
+      </viewAttribute>
+      <viewAttribute id="ADJ_WEEK">
+        <descriptions defaultDescription="ADJ_WEEK"/>
+      </viewAttribute>
+      <viewAttribute id="ADJ_MONTH">
+        <descriptions defaultDescription="ADJ_MONTH"/>
+      </viewAttribute>
+      <viewAttribute id="ADJ_QTR">
+        <descriptions defaultDescription="ADJ_QTR"/>
+      </viewAttribute>
+      <viewAttribute id="ADJ_TYPE">
+        <descriptions defaultDescription="ADJ_TYPE"/>
+      </viewAttribute>
+      <viewAttribute id="MPL_FLAG">
+        <descriptions defaultDescription="MPL_FLAG"/>
+      </viewAttribute>
+      <viewAttribute id="FREEZE_EXCEPTION_FLAG">
+        <descriptions defaultDescription="FREEZE_EXCEPTION_FLAG"/>
+      </viewAttribute>
+      <viewAttribute id="BI_ID">
+        <descriptions defaultDescription="BI_ID"/>
+      </viewAttribute>
+      <viewAttribute id="VERSION_ID">
+        <descriptions defaultDescription="VERSION_ID"/>
+      </viewAttribute>
+      <viewAttribute id="ADJ_YEAR">
+        <descriptions defaultDescription="ADJ_YEAR"/>
+      </viewAttribute>
+      <viewAttribute id="RENEWAL_IDENTITY_FLAG">
+        <descriptions defaultDescription="RENEWAL_IDENTITY_FLAG"/>
+      </viewAttribute>
+    </viewAttributes>
+    <calculatedViewAttributes/>
+    <restrictedViewAttributes/>
+    <input node="EDW.BOOKING::XXVM_BOOKING_BI_EXTRACT">
+      <mapping xsi:type="Calculation:AttributeMapping" target="EXTRACT_ID" source="EXTRACT_ID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="BOOKING_HEADER_ID" source="BOOKING_HEADER_ID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="BOOKING_LINE_ID" source="BOOKING_LINE_ID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="BOOKING_DISTRIBUTION_ID" source="BOOKING_DISTRIBUTION_ID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="BOOKING_MISC_ID" source="BOOKING_MISC_ID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ID" source="ID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ORDERID" source="ORDERID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="HEADER_SOURCE" source="HEADER_SOURCE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ORDERDATE" source="ORDERDATE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="BILLTOORGANIZATION" source="BILLTOORGANIZATION"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="BILLTOISOCOUNTRYCODE" source="BILLTOISOCOUNTRYCODE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="BILLTOSTATE" source="BILLTOSTATE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="BILLTOZIP" source="BILLTOZIP"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="SHIPTOORGANIZATION" source="SHIPTOORGANIZATION"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="SHIPTOISOCOUNTRYCODE" source="SHIPTOISOCOUNTRYCODE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="SHIPTOSTATE" source="SHIPTOSTATE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="SHIPTOZIP" source="SHIPTOZIP"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ENDUSERISOCOUNTRYCODE" source="ENDUSERISOCOUNTRYCODE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ENDUSERSTATE" source="ENDUSERSTATE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ENDUSERZIP" source="ENDUSERZIP"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ENDUSERORGANIZATION" source="ENDUSERORGANIZATION"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CURRENCY" source="CURRENCY"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="EMAILADDRESS" source="EMAILADDRESS"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="PHONENUMBER" source="PHONENUMBER"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ETM_TERRITORY_FLAG" source="ETM_TERRITORY_FLAG"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="AUTO_ADJUSTMENTS_APPLIED_FLAG" source="AUTO_ADJUSTMENTS_APPLIED_FLAG"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="DELETED_FLAG" source="DELETED_FLAG"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="REBATE_FLAG" source="REBATE_FLAG"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="HEADERTOTAL" source="HEADERTOTAL"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="PRICE" source="PRICE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="DETAILTOTAL" source="DETAILTOTAL"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ENTEREDBY" source="ENTEREDBY"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="LASTNAME" source="LASTNAME"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="COMMENTS" source="COMMENTS"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="HARDWARE" source="HARDWARE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="RESELLER" source="RESELLER"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="SERIALNUMDELIVEREMAIL" source="SERIALNUMDELIVEREMAIL"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ORDERLINEID" source="ORDERLINEID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="WEEK" source="WEEK"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="MONTH" source="MONTH"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="QTR" source="QTR"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CHANNEL" source="CHANNEL"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CLASS" source="CLASS"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="PRODUCT" source="PRODUCT"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="PLATFORM" source="PLATFORM"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="USAGE" source="USAGE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="MEDIA" source="MEDIA"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ALLIANCE" source="ALLIANCE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CHANREG" source="CHANREG"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="BUNDLE" source="BUNDLE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CMO" source="CMO"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="RESELLERCALC" source="RESELLERCALC"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="PRODUCTSUMIF" source="PRODUCTSUMIF"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="TERRITORY2" source="TERRITORY2"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="LISTPRICE" source="LISTPRICE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="EXTLISTPRICE" source="EXTLISTPRICE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="OEMMONTH" source="OEMMONTH"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="LASTRUNDATE" source="LASTRUNDATE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="SNSMONTHS" source="SNSMONTHS"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="SELLINGPRICE" source="SELLINGPRICE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="DISC_TOTAL_LIST_PRICE" source="DISC_TOTAL_LIST_PRICE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="RESELLERLEVEL" source="RESELLERLEVEL"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="VPPDISCOUNT" source="VPPDISCOUNT"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="SPFDISCOUNT" source="SPFDISCOUNT"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ELA" source="ELA"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ORAN" source="ORAN"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="PSOPROJECTCODE" source="PSOPROJECTCODE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="REVENUEQTR" source="REVENUEQTR"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="SHIPDATE" source="SHIPDATE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CHANNELGROUP" source="CHANNELGROUP"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ORANNUMBER" source="ORANNUMBER"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="PARTNERID" source="PARTNERID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="SOURCE" source="SOURCE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="PHOENIXID" source="PHOENIXID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ELACAP" source="ELACAP"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="NAMREP" source="NAMREP"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="NAMEDPARTNER" source="NAMEDPARTNER"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ORDERIDPM" source="ORDERIDPM"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="GLNATURALACCOUNT" source="GLNATURALACCOUNT"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="GLCOMPANY" source="GLCOMPANY"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="GLPRODUCT" source="GLPRODUCT"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="PRICELC" source="PRICELC"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="DETAILTOTALLC" source="DETAILTOTALLC"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="HEADERTOTALLC" source="HEADERTOTALLC"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="LISTPRICELC" source="LISTPRICELC"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="EXTLISTPRICELC" source="EXTLISTPRICELC"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="PRICEUSD" source="PRICEUSD"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="DETAILTOTALUSD" source="DETAILTOTALUSD"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="HEADERTOTALUSD" source="HEADERTOTALUSD"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="LISTPRICEUSD" source="LISTPRICEUSD"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="EXTLISTPRICEUSD" source="EXTLISTPRICEUSD"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="BU" source="BU"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CLASSOFTRADE" source="CLASSOFTRADE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="QUANTITY2" source="QUANTITY2"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="EBS_HEADER_ID" source="EBS_HEADER_ID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="EBS_LINE_ID" source="EBS_LINE_ID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="LASTUPDATEDATE" source="LASTUPDATEDATE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="DETAILTOTALCONSTANTCUR" source="DETAILTOTALCONSTANTCUR"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="DETAILTOTALCONSTANTPLAN" source="DETAILTOTALCONSTANTPLAN"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="GEO" source="GEO"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="REGION" source="REGION"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="SUBREGION" source="SUBREGION"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="TERRITORY" source="TERRITORY"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="GEOTJ" source="GEOTJ"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="REGIONTJ" source="REGIONTJ"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="SUBREGIONTJ" source="SUBREGIONTJ"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="TERRITORYTJ" source="TERRITORYTJ"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="SPRINGSOURCEREP" source="SPRINGSOURCEREP"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="SSMREP" source="SSMREP"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="DIRECTREP" source="DIRECTREP"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="PARTNERREP" source="PARTNERREP"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="SIREP" source="SIREP"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="DIRECTREP_CAM_SE" source="DIRECTREP_CAM_SE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="GAMREP" source="GAMREP"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="PARTNERREP2" source="PARTNERREP2"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="FSIREP" source="FSIREP"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="GEMSTONEREP" source="GEMSTONEREP"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ZIMBRAREP" source="ZIMBRAREP"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="GSSMREP" source="GSSMREP"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ENTMGMTREP" source="ENTMGMTREP"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="PROCESS_FLAG" source="PROCESS_FLAG"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ERROR_MESSAGE" source="ERROR_MESSAGE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ATTRIBUTE1" source="ATTRIBUTE1"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ATTRIBUTE2" source="ATTRIBUTE2"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ATTRIBUTE3" source="ATTRIBUTE3"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CREATED_BY" source="CREATED_BY"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CREATION_DATE" source="CREATION_DATE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="LAST_UPDATED_BY" source="LAST_UPDATED_BY"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="LAST_UPDATE_DATE" source="LAST_UPDATE_DATE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="LAST_UPDATE_LOGIN" source="LAST_UPDATE_LOGIN"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="TRX_MODIFIER" source="TRX_MODIFIER"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ACTIVATION_POOL_NUM" source="ACTIVATION_POOL_NUM"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="LINK_TO_BOOKING_LINE_ID" source="LINK_TO_BOOKING_LINE_ID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ORIGINAL_TRX_NUMBER" source="ORIGINAL_TRX_NUMBER"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="TRX_TYPE" source="TRX_TYPE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="EXCLUDE_FOR_COMMISSION" source="EXCLUDE_FOR_COMMISSION"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="COMM_CREDIT_DATE" source="COMM_CREDIT_DATE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="DISTRIBUTION_TYPE" source="DISTRIBUTION_TYPE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="VSPP_REP" source="VSPP_REP"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="DIGITALFUEL_REP" source="DIGITALFUEL_REP"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="SOCIALCAST_REP" source="SOCIALCAST_REP"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="PARTNER_REP3" source="PARTNER_REP3"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="SHAVLIK_REP" source="SHAVLIK_REP"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="PO_NUMBER" source="PO_NUMBER"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="BILLTO_ADDRESS_DUNS" source="BILLTO_ADDRESS_DUNS"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="SHIPTO_ADDRESS_DUNS" source="SHIPTO_ADDRESS_DUNS"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ENDUSER_ADDRESS_DUNS" source="ENDUSER_ADDRESS_DUNS"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="RESELLER_ADDRESS_DUNS" source="RESELLER_ADDRESS_DUNS"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="BILLTO_ADDRESS_EA_NUMBER" source="BILLTO_ADDRESS_EA_NUMBER"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="SHIPTO_ADDRESS_EA_NUMBER" source="SHIPTO_ADDRESS_EA_NUMBER"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ENDUSER_ADDRESS_EA_NUMBER" source="ENDUSER_ADDRESS_EA_NUMBER"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="RESELLER_ADDRESS_EA_NUMBER" source="RESELLER_ADDRESS_EA_NUMBER"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="BILLTO_ADDRESS_UUID" source="BILLTO_ADDRESS_UUID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="SHIPTO_ADDRESS_UUID" source="SHIPTO_ADDRESS_UUID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ENDUSER_ADDRESS_UUID" source="ENDUSER_ADDRESS_UUID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="RESELLER_ADDRESS_UUID" source="RESELLER_ADDRESS_UUID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="TERRITORY_ID" source="TERRITORY_ID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="TERRITORY_ID_BOOK" source="TERRITORY_ID_BOOK"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="SOLD_TO_EMAIL_ADDRESS" source="SOLD_TO_EMAIL_ADDRESS"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="BILLTO_CUSTOMER_ID" source="BILLTO_CUSTOMER_ID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="SHIPTO_CUSTOMER_ID" source="SHIPTO_CUSTOMER_ID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ENDUSER_CUSTOMER_ID" source="ENDUSER_CUSTOMER_ID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="RESELLER_CUSTOMER_ID" source="RESELLER_CUSTOMER_ID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="BILLTO_CUST_NUMBER" source="BILLTO_CUST_NUMBER"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="SHIPTO_CUST_NUMBER" source="SHIPTO_CUST_NUMBER"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ENDUSER_CUST_NUMBER" source="ENDUSER_CUST_NUMBER"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="RESELLER_CUST_NUMBER" source="RESELLER_CUST_NUMBER"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="TENANT_SERVICE_INSTANCE_ID" source="TENANT_SERVICE_INSTANCE_ID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="SDP_LINE_TYPE" source="SDP_LINE_TYPE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="DISTRIBUTOR_REP" source="DISTRIBUTOR_REP"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="VCHS_REP" source="VCHS_REP"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CLOUD_MGMT_REP" source="CLOUD_MGMT_REP"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="HEADER_CREATION_DATE" source="HEADER_CREATION_DATE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="HEADER_LAST_UPDATE_DATE" source="HEADER_LAST_UPDATE_DATE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="LINE_CREATION_DATE" source="LINE_CREATION_DATE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="LINE_LAST_UPDATE_DATE" source="LINE_LAST_UPDATE_DATE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="DIST_CREATION_DATE" source="DIST_CREATION_DATE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="DIST_LAST_UPDATE_DATE" source="DIST_LAST_UPDATE_DATE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="SDP_OFFERING_TYPE" source="SDP_OFFERING_TYPE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="SELLING_TRANSACTION_TYPE" source="SELLING_TRANSACTION_TYPE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="VSPP_EXTERNAL_SKU" source="VSPP_EXTERNAL_SKU"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="VSPP_LINE_TYPE" source="VSPP_LINE_TYPE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="EXTERNAL_CONTRACT_ID" source="EXTERNAL_CONTRACT_ID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="VSPP_CONTRACT_TYPE" source="VSPP_CONTRACT_TYPE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ORIGINAL_SNSMONTHS" source="ORIGINAL_SNSMONTHS"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ITCV_DETAIL_TOTAL" source="ITCV_DETAIL_TOTAL"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ITCV_DETAIL_TOTAL_LC" source="ITCV_DETAIL_TOTAL_LC"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ACV_INSTALLMENT_NUMBER" source="ACV_INSTALLMENT_NUMBER"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ALLIANCE_TYPE" source="ALLIANCE_TYPE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="DW_LOAD_DATE" source="DW_LOAD_DATE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="HEADER_TOTAL_CC" source="HEADER_TOTAL_CC"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="DETAIL_TOTAL_PRV_HLF_CC" source="DETAIL_TOTAL_PRV_HLF_CC"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="PRODUCTID" source="PRODUCTID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="BUNDLESKU" source="BUNDLESKU"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="GEOTJ_RPT" source="GEOTJ_RPT"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="REGIONTJ_RPT" source="REGIONTJ_RPT"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="SUBREGIONTJ_RPT" source="SUBREGIONTJ_RPT"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="DIRECTREP_RPT" source="DIRECTREP_RPT"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="BOOKING_ADJUSTED_DATE" source="BOOKING_ADJUSTED_DATE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="LAUNCHED_GEO" source="LAUNCHED_GEO"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="LAUNCHED_REGION" source="LAUNCHED_REGION"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="LAUNCHED_SUBREGION" source="LAUNCHED_SUBREGION"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="LAUNCHED_TERRITORY" source="LAUNCHED_TERRITORY"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="LANDED_GEO" source="LANDED_GEO"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="LANDED_REGION" source="LANDED_REGION"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="LANDED_SUBREGION" source="LANDED_SUBREGION"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="LANDED_TERRITORY" source="LANDED_TERRITORY"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="PRODUCT_DIVISION" source="PRODUCT_DIVISION"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="PRODUCT_GROUP" source="PRODUCT_GROUP"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="PLATFORM_GROUP" source="PLATFORM_GROUP"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="PRODUCT_PLATFORM" source="PRODUCT_PLATFORM"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CURRENT_QTR_IND" source="CURRENT_QTR_IND"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="DISTI_GEO" source="DISTI_GEO"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="DISTI_REGION" source="DISTI_REGION"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="DISTI_SUBREGION" source="DISTI_SUBREGION"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="DISTI_TERRITORY" source="DISTI_TERRITORY"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="DELL_ALLIANCE" source="DELL_ALLIANCE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="DELL_BILLTOORGANIZATION" source="DELL_BILLTOORGANIZATION"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="DELL_ENDUSERORGANIZATION" source="DELL_ENDUSERORGANIZATION"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="QUANTITY" source="QUANTITY"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ITCV_DETAIL_TOTAL_DRVD" source="ITCV_DETAIL_TOTAL_DRVD"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CUSTOMER_SEGMENT" source="CUSTOMER_SEGMENT"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="VCA_FLAG" source="VCA_FLAG"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="DETAIL_TOTAL_CONSTANT_CUR_IR" source="DETAIL_TOTAL_CONSTANT_CUR_IR"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="FPA_MARKET_TYPE" source="FPA_MARKET_TYPE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="VCPP_PREPAY_FLAG" source="VCPP_PREPAY_FLAG"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CLOUD_CREDIT_ORDER" source="CLOUD_CREDIT_ORDER"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="EXTERNAL_CONTRACT_NUMBER" source="EXTERNAL_CONTRACT_NUMBER"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="PAYMENT_TERM" source="PAYMENT_TERM"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="EFFECTIVE_FULL_DURATION" source="EFFECTIVE_FULL_DURATION"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="USAGE_PERIOD" source="USAGE_PERIOD"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="GEORPT" source="GEORPT"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="REGIONRPT" source="REGIONRPT"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="SUBREGIONRPT" source="SUBREGIONRPT"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="TERRITORYRPT" source="TERRITORYRPT"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ADJ_DATE" source="ADJ_DATE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ADJ_WEEK" source="ADJ_WEEK"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ADJ_MONTH" source="ADJ_MONTH"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ADJ_QTR" source="ADJ_QTR"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ADJ_TYPE" source="ADJ_TYPE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="MPL_FLAG" source="MPL_FLAG"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="FREEZE_EXCEPTION_FLAG" source="FREEZE_EXCEPTION_FLAG"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="BI_ID" source="BI_ID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="VERSION_ID" source="VERSION_ID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ADJ_YEAR" source="ADJ_YEAR"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="RENEWAL_IDENTITY_FLAG" source="RENEWAL_IDENTITY_FLAG"/>
+    </input>
+  </calculationView>
+</calculationViews>
+<logicalModel id="Projection_1">
+  <attributes>
+    <attribute id="EXTRACT_ID" order="1" semanticType="empty" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="EXTRACT_ID"/>
+      <keyMapping columnObjectName="Projection_1" columnName="EXTRACT_ID"/>
+    </attribute>
+    <attribute id="BOOKING_HEADER_ID" order="2" semanticType="empty" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="BOOKING_HEADER_ID"/>
+      <keyMapping columnObjectName="Projection_1" columnName="BOOKING_HEADER_ID"/>
+    </attribute>
+    <attribute id="BOOKING_LINE_ID" order="3" semanticType="empty" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="BOOKING_LINE_ID"/>
+      <keyMapping columnObjectName="Projection_1" columnName="BOOKING_LINE_ID"/>
+    </attribute>
+    <attribute id="BOOKING_DISTRIBUTION_ID" order="4" semanticType="empty" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="BOOKING_DISTRIBUTION_ID"/>
+      <keyMapping columnObjectName="Projection_1" columnName="BOOKING_DISTRIBUTION_ID"/>
+    </attribute>
+    <attribute id="BOOKING_MISC_ID" order="5" semanticType="empty" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="BOOKING_MISC_ID"/>
+      <keyMapping columnObjectName="Projection_1" columnName="BOOKING_MISC_ID"/>
+    </attribute>
+    <attribute id="ID" order="6" semanticType="empty" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="ID"/>
+      <keyMapping columnObjectName="Projection_1" columnName="ID"/>
+    </attribute>
+    <attribute id="ORDERID" order="7" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="ORDERID"/>
+      <keyMapping columnObjectName="Projection_1" columnName="ORDERID"/>
+    </attribute>
+    <attribute id="HEADER_SOURCE" order="8" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="HEADER_SOURCE"/>
+      <keyMapping columnObjectName="Projection_1" columnName="HEADER_SOURCE"/>
+    </attribute>
+    <attribute id="ORDERDATE" order="9" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="ORDERDATE"/>
+      <keyMapping columnObjectName="Projection_1" columnName="ORDERDATE"/>
+    </attribute>
+    <attribute id="BILLTOORGANIZATION" order="10" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="BILLTOORGANIZATION"/>
+      <keyMapping columnObjectName="Projection_1" columnName="BILLTOORGANIZATION"/>
+    </attribute>
+    <attribute id="BILLTOISOCOUNTRYCODE" order="11" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="BILLTOISOCOUNTRYCODE"/>
+      <keyMapping columnObjectName="Projection_1" columnName="BILLTOISOCOUNTRYCODE"/>
+    </attribute>
+    <attribute id="BILLTOSTATE" order="12" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="BILLTOSTATE"/>
+      <keyMapping columnObjectName="Projection_1" columnName="BILLTOSTATE"/>
+    </attribute>
+    <attribute id="BILLTOZIP" order="13" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="BILLTOZIP"/>
+      <keyMapping columnObjectName="Projection_1" columnName="BILLTOZIP"/>
+    </attribute>
+    <attribute id="SHIPTOORGANIZATION" order="14" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="SHIPTOORGANIZATION"/>
+      <keyMapping columnObjectName="Projection_1" columnName="SHIPTOORGANIZATION"/>
+    </attribute>
+    <attribute id="SHIPTOISOCOUNTRYCODE" order="15" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="SHIPTOISOCOUNTRYCODE"/>
+      <keyMapping columnObjectName="Projection_1" columnName="SHIPTOISOCOUNTRYCODE"/>
+    </attribute>
+    <attribute id="SHIPTOSTATE" order="16" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="SHIPTOSTATE"/>
+      <keyMapping columnObjectName="Projection_1" columnName="SHIPTOSTATE"/>
+    </attribute>
+    <attribute id="SHIPTOZIP" order="17" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="SHIPTOZIP"/>
+      <keyMapping columnObjectName="Projection_1" columnName="SHIPTOZIP"/>
+    </attribute>
+    <attribute id="ENDUSERISOCOUNTRYCODE" order="18" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="ENDUSERISOCOUNTRYCODE"/>
+      <keyMapping columnObjectName="Projection_1" columnName="ENDUSERISOCOUNTRYCODE"/>
+    </attribute>
+    <attribute id="ENDUSERSTATE" order="19" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="ENDUSERSTATE"/>
+      <keyMapping columnObjectName="Projection_1" columnName="ENDUSERSTATE"/>
+    </attribute>
+    <attribute id="ENDUSERZIP" order="20" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="ENDUSERZIP"/>
+      <keyMapping columnObjectName="Projection_1" columnName="ENDUSERZIP"/>
+    </attribute>
+    <attribute id="ENDUSERORGANIZATION" order="21" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="ENDUSERORGANIZATION"/>
+      <keyMapping columnObjectName="Projection_1" columnName="ENDUSERORGANIZATION"/>
+    </attribute>
+    <attribute id="CURRENCY" order="22" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CURRENCY"/>
+      <keyMapping columnObjectName="Projection_1" columnName="CURRENCY"/>
+    </attribute>
+    <attribute id="EMAILADDRESS" order="23" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="EMAILADDRESS"/>
+      <keyMapping columnObjectName="Projection_1" columnName="EMAILADDRESS"/>
+    </attribute>
+    <attribute id="PHONENUMBER" order="24" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="PHONENUMBER"/>
+      <keyMapping columnObjectName="Projection_1" columnName="PHONENUMBER"/>
+    </attribute>
+    <attribute id="ETM_TERRITORY_FLAG" order="25" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="ETM_TERRITORY_FLAG"/>
+      <keyMapping columnObjectName="Projection_1" columnName="ETM_TERRITORY_FLAG"/>
+    </attribute>
+    <attribute id="AUTO_ADJUSTMENTS_APPLIED_FLAG" order="26" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="AUTO_ADJUSTMENTS_APPLIED_FLAG"/>
+      <keyMapping columnObjectName="Projection_1" columnName="AUTO_ADJUSTMENTS_APPLIED_FLAG"/>
+    </attribute>
+    <attribute id="DELETED_FLAG" order="27" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="DELETED_FLAG"/>
+      <keyMapping columnObjectName="Projection_1" columnName="DELETED_FLAG"/>
+    </attribute>
+    <attribute id="REBATE_FLAG" order="28" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="REBATE_FLAG"/>
+      <keyMapping columnObjectName="Projection_1" columnName="REBATE_FLAG"/>
+    </attribute>
+    <attribute id="ENTEREDBY" order="32" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="ENTEREDBY"/>
+      <keyMapping columnObjectName="Projection_1" columnName="ENTEREDBY"/>
+    </attribute>
+    <attribute id="LASTNAME" order="33" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="LASTNAME"/>
+      <keyMapping columnObjectName="Projection_1" columnName="LASTNAME"/>
+    </attribute>
+    <attribute id="COMMENTS" order="34" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="COMMENTS"/>
+      <keyMapping columnObjectName="Projection_1" columnName="COMMENTS"/>
+    </attribute>
+    <attribute id="HARDWARE" order="35" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="HARDWARE"/>
+      <keyMapping columnObjectName="Projection_1" columnName="HARDWARE"/>
+    </attribute>
+    <attribute id="RESELLER" order="36" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="RESELLER"/>
+      <keyMapping columnObjectName="Projection_1" columnName="RESELLER"/>
+    </attribute>
+    <attribute id="SERIALNUMDELIVEREMAIL" order="37" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="SERIALNUMDELIVEREMAIL"/>
+      <keyMapping columnObjectName="Projection_1" columnName="SERIALNUMDELIVEREMAIL"/>
+    </attribute>
+    <attribute id="ORDERLINEID" order="38" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="ORDERLINEID"/>
+      <keyMapping columnObjectName="Projection_1" columnName="ORDERLINEID"/>
+    </attribute>
+    <attribute id="WEEK" order="39" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="WEEK"/>
+      <keyMapping columnObjectName="Projection_1" columnName="WEEK"/>
+    </attribute>
+    <attribute id="MONTH" order="40" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="MONTH"/>
+      <keyMapping columnObjectName="Projection_1" columnName="MONTH"/>
+    </attribute>
+    <attribute id="QTR" order="41" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="QTR"/>
+      <keyMapping columnObjectName="Projection_1" columnName="QTR"/>
+    </attribute>
+    <attribute id="CHANNEL" order="42" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CHANNEL"/>
+      <keyMapping columnObjectName="Projection_1" columnName="CHANNEL"/>
+    </attribute>
+    <attribute id="CLASS" order="43" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CLASS"/>
+      <keyMapping columnObjectName="Projection_1" columnName="CLASS"/>
+    </attribute>
+    <attribute id="PRODUCT" order="44" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="PRODUCT"/>
+      <keyMapping columnObjectName="Projection_1" columnName="PRODUCT"/>
+    </attribute>
+    <attribute id="PLATFORM" order="45" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="PLATFORM"/>
+      <keyMapping columnObjectName="Projection_1" columnName="PLATFORM"/>
+    </attribute>
+    <attribute id="USAGE" order="46" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="USAGE"/>
+      <keyMapping columnObjectName="Projection_1" columnName="USAGE"/>
+    </attribute>
+    <attribute id="MEDIA" order="47" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="MEDIA"/>
+      <keyMapping columnObjectName="Projection_1" columnName="MEDIA"/>
+    </attribute>
+    <attribute id="ALLIANCE" order="48" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="ALLIANCE"/>
+      <keyMapping columnObjectName="Projection_1" columnName="ALLIANCE"/>
+    </attribute>
+    <attribute id="CHANREG" order="49" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CHANREG"/>
+      <keyMapping columnObjectName="Projection_1" columnName="CHANREG"/>
+    </attribute>
+    <attribute id="BUNDLE" order="50" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="BUNDLE"/>
+      <keyMapping columnObjectName="Projection_1" columnName="BUNDLE"/>
+    </attribute>
+    <attribute id="RESELLERCALC" order="52" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="RESELLERCALC"/>
+      <keyMapping columnObjectName="Projection_1" columnName="RESELLERCALC"/>
+    </attribute>
+    <attribute id="PRODUCTSUMIF" order="53" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="PRODUCTSUMIF"/>
+      <keyMapping columnObjectName="Projection_1" columnName="PRODUCTSUMIF"/>
+    </attribute>
+    <attribute id="TERRITORY2" order="54" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="TERRITORY2"/>
+      <keyMapping columnObjectName="Projection_1" columnName="TERRITORY2"/>
+    </attribute>
+    <attribute id="RESELLERLEVEL" order="62" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="RESELLERLEVEL"/>
+      <keyMapping columnObjectName="Projection_1" columnName="RESELLERLEVEL"/>
+    </attribute>
+    <attribute id="VPPDISCOUNT" order="63" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="VPPDISCOUNT"/>
+      <keyMapping columnObjectName="Projection_1" columnName="VPPDISCOUNT"/>
+    </attribute>
+    <attribute id="SPFDISCOUNT" order="64" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="SPFDISCOUNT"/>
+      <keyMapping columnObjectName="Projection_1" columnName="SPFDISCOUNT"/>
+    </attribute>
+    <attribute id="ELA" order="65" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="ELA"/>
+      <keyMapping columnObjectName="Projection_1" columnName="ELA"/>
+    </attribute>
+    <attribute id="ORAN" order="66" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="ORAN"/>
+      <keyMapping columnObjectName="Projection_1" columnName="ORAN"/>
+    </attribute>
+    <attribute id="PSOPROJECTCODE" order="67" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="PSOPROJECTCODE"/>
+      <keyMapping columnObjectName="Projection_1" columnName="PSOPROJECTCODE"/>
+    </attribute>
+    <attribute id="REVENUEQTR" order="68" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="REVENUEQTR"/>
+      <keyMapping columnObjectName="Projection_1" columnName="REVENUEQTR"/>
+    </attribute>
+    <attribute id="CHANNELGROUP" order="70" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CHANNELGROUP"/>
+      <keyMapping columnObjectName="Projection_1" columnName="CHANNELGROUP"/>
+    </attribute>
+    <attribute id="ORANNUMBER" order="71" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="ORANNUMBER"/>
+      <keyMapping columnObjectName="Projection_1" columnName="ORANNUMBER"/>
+    </attribute>
+    <attribute id="PARTNERID" order="72" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="PARTNERID"/>
+      <keyMapping columnObjectName="Projection_1" columnName="PARTNERID"/>
+    </attribute>
+    <attribute id="SOURCE" order="73" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="SOURCE"/>
+      <keyMapping columnObjectName="Projection_1" columnName="SOURCE"/>
+    </attribute>
+    <attribute id="ELACAP" order="75" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="ELACAP"/>
+      <keyMapping columnObjectName="Projection_1" columnName="ELACAP"/>
+    </attribute>
+    <attribute id="NAMREP" order="76" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="NAMREP"/>
+      <keyMapping columnObjectName="Projection_1" columnName="NAMREP"/>
+    </attribute>
+    <attribute id="NAMEDPARTNER" order="77" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="NAMEDPARTNER"/>
+      <keyMapping columnObjectName="Projection_1" columnName="NAMEDPARTNER"/>
+    </attribute>
+    <attribute id="ORDERIDPM" order="78" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="ORDERIDPM"/>
+      <keyMapping columnObjectName="Projection_1" columnName="ORDERIDPM"/>
+    </attribute>
+    <attribute id="GLNATURALACCOUNT" order="79" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="GLNATURALACCOUNT"/>
+      <keyMapping columnObjectName="Projection_1" columnName="GLNATURALACCOUNT"/>
+    </attribute>
+    <attribute id="GLCOMPANY" order="80" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="GLCOMPANY"/>
+      <keyMapping columnObjectName="Projection_1" columnName="GLCOMPANY"/>
+    </attribute>
+    <attribute id="GLPRODUCT" order="81" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="GLPRODUCT"/>
+      <keyMapping columnObjectName="Projection_1" columnName="GLPRODUCT"/>
+    </attribute>
+    <attribute id="BU" order="92" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="BU"/>
+      <keyMapping columnObjectName="Projection_1" columnName="BU"/>
+    </attribute>
+    <attribute id="CLASSOFTRADE" order="93" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CLASSOFTRADE"/>
+      <keyMapping columnObjectName="Projection_1" columnName="CLASSOFTRADE"/>
+    </attribute>
+    <attribute id="GEO" order="100" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="GEO"/>
+      <keyMapping columnObjectName="Projection_1" columnName="GEO"/>
+    </attribute>
+    <attribute id="REGION" order="101" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="REGION"/>
+      <keyMapping columnObjectName="Projection_1" columnName="REGION"/>
+    </attribute>
+    <attribute id="SUBREGION" order="102" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="SUBREGION"/>
+      <keyMapping columnObjectName="Projection_1" columnName="SUBREGION"/>
+    </attribute>
+    <attribute id="TERRITORY" order="103" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="TERRITORY"/>
+      <keyMapping columnObjectName="Projection_1" columnName="TERRITORY"/>
+    </attribute>
+    <attribute id="GEOTJ" order="104" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="GEOTJ"/>
+      <keyMapping columnObjectName="Projection_1" columnName="GEOTJ"/>
+    </attribute>
+    <attribute id="REGIONTJ" order="105" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="REGIONTJ"/>
+      <keyMapping columnObjectName="Projection_1" columnName="REGIONTJ"/>
+    </attribute>
+    <attribute id="SUBREGIONTJ" order="106" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="SUBREGIONTJ"/>
+      <keyMapping columnObjectName="Projection_1" columnName="SUBREGIONTJ"/>
+    </attribute>
+    <attribute id="TERRITORYTJ" order="107" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="TERRITORYTJ"/>
+      <keyMapping columnObjectName="Projection_1" columnName="TERRITORYTJ"/>
+    </attribute>
+    <attribute id="SPRINGSOURCEREP" order="108" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="SPRINGSOURCEREP"/>
+      <keyMapping columnObjectName="Projection_1" columnName="SPRINGSOURCEREP"/>
+    </attribute>
+    <attribute id="SSMREP" order="109" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="SSMREP"/>
+      <keyMapping columnObjectName="Projection_1" columnName="SSMREP"/>
+    </attribute>
+    <attribute id="DIRECTREP" order="110" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="DIRECTREP"/>
+      <keyMapping columnObjectName="Projection_1" columnName="DIRECTREP"/>
+    </attribute>
+    <attribute id="PARTNERREP" order="111" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="PARTNERREP"/>
+      <keyMapping columnObjectName="Projection_1" columnName="PARTNERREP"/>
+    </attribute>
+    <attribute id="SIREP" order="112" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="SIREP"/>
+      <keyMapping columnObjectName="Projection_1" columnName="SIREP"/>
+    </attribute>
+    <attribute id="DIRECTREP_CAM_SE" order="113" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="DIRECTREP_CAM_SE"/>
+      <keyMapping columnObjectName="Projection_1" columnName="DIRECTREP_CAM_SE"/>
+    </attribute>
+    <attribute id="GAMREP" order="114" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="GAMREP"/>
+      <keyMapping columnObjectName="Projection_1" columnName="GAMREP"/>
+    </attribute>
+    <attribute id="PARTNERREP2" order="115" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="PARTNERREP2"/>
+      <keyMapping columnObjectName="Projection_1" columnName="PARTNERREP2"/>
+    </attribute>
+    <attribute id="FSIREP" order="116" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="FSIREP"/>
+      <keyMapping columnObjectName="Projection_1" columnName="FSIREP"/>
+    </attribute>
+    <attribute id="GEMSTONEREP" order="117" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="GEMSTONEREP"/>
+      <keyMapping columnObjectName="Projection_1" columnName="GEMSTONEREP"/>
+    </attribute>
+    <attribute id="ZIMBRAREP" order="118" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="ZIMBRAREP"/>
+      <keyMapping columnObjectName="Projection_1" columnName="ZIMBRAREP"/>
+    </attribute>
+    <attribute id="GSSMREP" order="119" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="GSSMREP"/>
+      <keyMapping columnObjectName="Projection_1" columnName="GSSMREP"/>
+    </attribute>
+    <attribute id="ENTMGMTREP" order="120" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="ENTMGMTREP"/>
+      <keyMapping columnObjectName="Projection_1" columnName="ENTMGMTREP"/>
+    </attribute>
+    <attribute id="PROCESS_FLAG" order="121" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="PROCESS_FLAG"/>
+      <keyMapping columnObjectName="Projection_1" columnName="PROCESS_FLAG"/>
+    </attribute>
+    <attribute id="ERROR_MESSAGE" order="122" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="ERROR_MESSAGE"/>
+      <keyMapping columnObjectName="Projection_1" columnName="ERROR_MESSAGE"/>
+    </attribute>
+    <attribute id="ATTRIBUTE1" order="123" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="ATTRIBUTE1"/>
+      <keyMapping columnObjectName="Projection_1" columnName="ATTRIBUTE1"/>
+    </attribute>
+    <attribute id="ATTRIBUTE2" order="124" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="ATTRIBUTE2"/>
+      <keyMapping columnObjectName="Projection_1" columnName="ATTRIBUTE2"/>
+    </attribute>
+    <attribute id="ATTRIBUTE3" order="125" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="ATTRIBUTE3"/>
+      <keyMapping columnObjectName="Projection_1" columnName="ATTRIBUTE3"/>
+    </attribute>
+    <attribute id="TRX_MODIFIER" order="131" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="TRX_MODIFIER"/>
+      <keyMapping columnObjectName="Projection_1" columnName="TRX_MODIFIER"/>
+    </attribute>
+    <attribute id="ORIGINAL_TRX_NUMBER" order="134" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="ORIGINAL_TRX_NUMBER"/>
+      <keyMapping columnObjectName="Projection_1" columnName="ORIGINAL_TRX_NUMBER"/>
+    </attribute>
+    <attribute id="TRX_TYPE" order="135" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="TRX_TYPE"/>
+      <keyMapping columnObjectName="Projection_1" columnName="TRX_TYPE"/>
+    </attribute>
+    <attribute id="EXCLUDE_FOR_COMMISSION" order="136" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="EXCLUDE_FOR_COMMISSION"/>
+      <keyMapping columnObjectName="Projection_1" columnName="EXCLUDE_FOR_COMMISSION"/>
+    </attribute>
+    <attribute id="DISTRIBUTION_TYPE" order="138" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="DISTRIBUTION_TYPE"/>
+      <keyMapping columnObjectName="Projection_1" columnName="DISTRIBUTION_TYPE"/>
+    </attribute>
+    <attribute id="VSPP_REP" order="139" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="VSPP_REP"/>
+      <keyMapping columnObjectName="Projection_1" columnName="VSPP_REP"/>
+    </attribute>
+    <attribute id="DIGITALFUEL_REP" order="140" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="DIGITALFUEL_REP"/>
+      <keyMapping columnObjectName="Projection_1" columnName="DIGITALFUEL_REP"/>
+    </attribute>
+    <attribute id="SOCIALCAST_REP" order="141" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="SOCIALCAST_REP"/>
+      <keyMapping columnObjectName="Projection_1" columnName="SOCIALCAST_REP"/>
+    </attribute>
+    <attribute id="PARTNER_REP3" order="142" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="PARTNER_REP3"/>
+      <keyMapping columnObjectName="Projection_1" columnName="PARTNER_REP3"/>
+    </attribute>
+    <attribute id="SHAVLIK_REP" order="143" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="SHAVLIK_REP"/>
+      <keyMapping columnObjectName="Projection_1" columnName="SHAVLIK_REP"/>
+    </attribute>
+    <attribute id="PO_NUMBER" order="144" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="PO_NUMBER"/>
+      <keyMapping columnObjectName="Projection_1" columnName="PO_NUMBER"/>
+    </attribute>
+    <attribute id="BILLTO_ADDRESS_DUNS" order="145" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="BILLTO_ADDRESS_DUNS"/>
+      <keyMapping columnObjectName="Projection_1" columnName="BILLTO_ADDRESS_DUNS"/>
+    </attribute>
+    <attribute id="SHIPTO_ADDRESS_DUNS" order="146" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="SHIPTO_ADDRESS_DUNS"/>
+      <keyMapping columnObjectName="Projection_1" columnName="SHIPTO_ADDRESS_DUNS"/>
+    </attribute>
+    <attribute id="ENDUSER_ADDRESS_DUNS" order="147" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="ENDUSER_ADDRESS_DUNS"/>
+      <keyMapping columnObjectName="Projection_1" columnName="ENDUSER_ADDRESS_DUNS"/>
+    </attribute>
+    <attribute id="RESELLER_ADDRESS_DUNS" order="148" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="RESELLER_ADDRESS_DUNS"/>
+      <keyMapping columnObjectName="Projection_1" columnName="RESELLER_ADDRESS_DUNS"/>
+    </attribute>
+    <attribute id="BILLTO_ADDRESS_EA_NUMBER" order="149" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="BILLTO_ADDRESS_EA_NUMBER"/>
+      <keyMapping columnObjectName="Projection_1" columnName="BILLTO_ADDRESS_EA_NUMBER"/>
+    </attribute>
+    <attribute id="SHIPTO_ADDRESS_EA_NUMBER" order="150" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="SHIPTO_ADDRESS_EA_NUMBER"/>
+      <keyMapping columnObjectName="Projection_1" columnName="SHIPTO_ADDRESS_EA_NUMBER"/>
+    </attribute>
+    <attribute id="ENDUSER_ADDRESS_EA_NUMBER" order="151" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="ENDUSER_ADDRESS_EA_NUMBER"/>
+      <keyMapping columnObjectName="Projection_1" columnName="ENDUSER_ADDRESS_EA_NUMBER"/>
+    </attribute>
+    <attribute id="RESELLER_ADDRESS_EA_NUMBER" order="152" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="RESELLER_ADDRESS_EA_NUMBER"/>
+      <keyMapping columnObjectName="Projection_1" columnName="RESELLER_ADDRESS_EA_NUMBER"/>
+    </attribute>
+    <attribute id="BILLTO_ADDRESS_UUID" order="153" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="BILLTO_ADDRESS_UUID"/>
+      <keyMapping columnObjectName="Projection_1" columnName="BILLTO_ADDRESS_UUID"/>
+    </attribute>
+    <attribute id="SHIPTO_ADDRESS_UUID" order="154" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="SHIPTO_ADDRESS_UUID"/>
+      <keyMapping columnObjectName="Projection_1" columnName="SHIPTO_ADDRESS_UUID"/>
+    </attribute>
+    <attribute id="ENDUSER_ADDRESS_UUID" order="155" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="ENDUSER_ADDRESS_UUID"/>
+      <keyMapping columnObjectName="Projection_1" columnName="ENDUSER_ADDRESS_UUID"/>
+    </attribute>
+    <attribute id="RESELLER_ADDRESS_UUID" order="156" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="RESELLER_ADDRESS_UUID"/>
+      <keyMapping columnObjectName="Projection_1" columnName="RESELLER_ADDRESS_UUID"/>
+    </attribute>
+    <attribute id="SOLD_TO_EMAIL_ADDRESS" order="159" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="SOLD_TO_EMAIL_ADDRESS"/>
+      <keyMapping columnObjectName="Projection_1" columnName="SOLD_TO_EMAIL_ADDRESS"/>
+    </attribute>
+    <attribute id="BILLTO_CUST_NUMBER" order="164" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="BILLTO_CUST_NUMBER"/>
+      <keyMapping columnObjectName="Projection_1" columnName="BILLTO_CUST_NUMBER"/>
+    </attribute>
+    <attribute id="SHIPTO_CUST_NUMBER" order="165" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="SHIPTO_CUST_NUMBER"/>
+      <keyMapping columnObjectName="Projection_1" columnName="SHIPTO_CUST_NUMBER"/>
+    </attribute>
+    <attribute id="ENDUSER_CUST_NUMBER" order="166" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="ENDUSER_CUST_NUMBER"/>
+      <keyMapping columnObjectName="Projection_1" columnName="ENDUSER_CUST_NUMBER"/>
+    </attribute>
+    <attribute id="RESELLER_CUST_NUMBER" order="167" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="RESELLER_CUST_NUMBER"/>
+      <keyMapping columnObjectName="Projection_1" columnName="RESELLER_CUST_NUMBER"/>
+    </attribute>
+    <attribute id="TENANT_SERVICE_INSTANCE_ID" order="168" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="TENANT_SERVICE_INSTANCE_ID"/>
+      <keyMapping columnObjectName="Projection_1" columnName="TENANT_SERVICE_INSTANCE_ID"/>
+    </attribute>
+    <attribute id="SDP_LINE_TYPE" order="169" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="SDP_LINE_TYPE"/>
+      <keyMapping columnObjectName="Projection_1" columnName="SDP_LINE_TYPE"/>
+    </attribute>
+    <attribute id="DISTRIBUTOR_REP" order="170" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="DISTRIBUTOR_REP"/>
+      <keyMapping columnObjectName="Projection_1" columnName="DISTRIBUTOR_REP"/>
+    </attribute>
+    <attribute id="VCHS_REP" order="171" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="VCHS_REP"/>
+      <keyMapping columnObjectName="Projection_1" columnName="VCHS_REP"/>
+    </attribute>
+    <attribute id="CLOUD_MGMT_REP" order="172" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CLOUD_MGMT_REP"/>
+      <keyMapping columnObjectName="Projection_1" columnName="CLOUD_MGMT_REP"/>
+    </attribute>
+    <attribute id="SDP_OFFERING_TYPE" order="179" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="SDP_OFFERING_TYPE"/>
+      <keyMapping columnObjectName="Projection_1" columnName="SDP_OFFERING_TYPE"/>
+    </attribute>
+    <attribute id="SELLING_TRANSACTION_TYPE" order="180" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="SELLING_TRANSACTION_TYPE"/>
+      <keyMapping columnObjectName="Projection_1" columnName="SELLING_TRANSACTION_TYPE"/>
+    </attribute>
+    <attribute id="VSPP_EXTERNAL_SKU" order="181" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="VSPP_EXTERNAL_SKU"/>
+      <keyMapping columnObjectName="Projection_1" columnName="VSPP_EXTERNAL_SKU"/>
+    </attribute>
+    <attribute id="VSPP_LINE_TYPE" order="182" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="VSPP_LINE_TYPE"/>
+      <keyMapping columnObjectName="Projection_1" columnName="VSPP_LINE_TYPE"/>
+    </attribute>
+    <attribute id="EXTERNAL_CONTRACT_ID" order="183" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="EXTERNAL_CONTRACT_ID"/>
+      <keyMapping columnObjectName="Projection_1" columnName="EXTERNAL_CONTRACT_ID"/>
+    </attribute>
+    <attribute id="VSPP_CONTRACT_TYPE" order="184" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="VSPP_CONTRACT_TYPE"/>
+      <keyMapping columnObjectName="Projection_1" columnName="VSPP_CONTRACT_TYPE"/>
+    </attribute>
+    <attribute id="ORIGINAL_SNSMONTHS" order="185" semanticType="empty" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="ORIGINAL_SNSMONTHS"/>
+      <keyMapping columnObjectName="Projection_1" columnName="ORIGINAL_SNSMONTHS"/>
+    </attribute>
+    <attribute id="ALLIANCE_TYPE" order="189" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="ALLIANCE_TYPE"/>
+      <keyMapping columnObjectName="Projection_1" columnName="ALLIANCE_TYPE"/>
+    </attribute>
+    <attribute id="DW_LOAD_DATE" order="190" semanticType="empty" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="DW_LOAD_DATE"/>
+      <keyMapping columnObjectName="Projection_1" columnName="DW_LOAD_DATE"/>
+    </attribute>
+    <attribute id="PRODUCTID" order="193" semanticType="empty" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="PRODUCTID"/>
+      <keyMapping columnObjectName="Projection_1" columnName="PRODUCTID"/>
+    </attribute>
+    <attribute id="BUNDLESKU" order="194" semanticType="empty" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="BUNDLESKU"/>
+      <keyMapping columnObjectName="Projection_1" columnName="BUNDLESKU"/>
+    </attribute>
+    <attribute id="GEOTJ_RPT" order="195" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="GEOTJ_RPT"/>
+      <keyMapping columnObjectName="Projection_1" columnName="GEOTJ_RPT"/>
+    </attribute>
+    <attribute id="REGIONTJ_RPT" order="196" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="REGIONTJ_RPT"/>
+      <keyMapping columnObjectName="Projection_1" columnName="REGIONTJ_RPT"/>
+    </attribute>
+    <attribute id="SUBREGIONTJ_RPT" order="197" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="SUBREGIONTJ_RPT"/>
+      <keyMapping columnObjectName="Projection_1" columnName="SUBREGIONTJ_RPT"/>
+    </attribute>
+    <attribute id="DIRECTREP_RPT" order="198" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="DIRECTREP_RPT"/>
+      <keyMapping columnObjectName="Projection_1" columnName="DIRECTREP_RPT"/>
+    </attribute>
+    <attribute id="BOOKING_ADJUSTED_DATE" order="199" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="BOOKING_ADJUSTED_DATE"/>
+      <keyMapping columnObjectName="Projection_1" columnName="BOOKING_ADJUSTED_DATE"/>
+    </attribute>
+    <attribute id="LAUNCHED_GEO" order="200" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="LAUNCHED_GEO"/>
+      <keyMapping columnObjectName="Projection_1" columnName="LAUNCHED_GEO"/>
+    </attribute>
+    <attribute id="LAUNCHED_REGION" order="201" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="LAUNCHED_REGION"/>
+      <keyMapping columnObjectName="Projection_1" columnName="LAUNCHED_REGION"/>
+    </attribute>
+    <attribute id="LAUNCHED_SUBREGION" order="202" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="LAUNCHED_SUBREGION"/>
+      <keyMapping columnObjectName="Projection_1" columnName="LAUNCHED_SUBREGION"/>
+    </attribute>
+    <attribute id="LAUNCHED_TERRITORY" order="203" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="LAUNCHED_TERRITORY"/>
+      <keyMapping columnObjectName="Projection_1" columnName="LAUNCHED_TERRITORY"/>
+    </attribute>
+    <attribute id="LANDED_GEO" order="204" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="LANDED_GEO"/>
+      <keyMapping columnObjectName="Projection_1" columnName="LANDED_GEO"/>
+    </attribute>
+    <attribute id="LANDED_REGION" order="205" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="LANDED_REGION"/>
+      <keyMapping columnObjectName="Projection_1" columnName="LANDED_REGION"/>
+    </attribute>
+    <attribute id="LANDED_SUBREGION" order="206" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="LANDED_SUBREGION"/>
+      <keyMapping columnObjectName="Projection_1" columnName="LANDED_SUBREGION"/>
+    </attribute>
+    <attribute id="LANDED_TERRITORY" order="207" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="LANDED_TERRITORY"/>
+      <keyMapping columnObjectName="Projection_1" columnName="LANDED_TERRITORY"/>
+    </attribute>
+    <attribute id="PRODUCT_DIVISION" order="208" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="PRODUCT_DIVISION"/>
+      <keyMapping columnObjectName="Projection_1" columnName="PRODUCT_DIVISION"/>
+    </attribute>
+    <attribute id="PRODUCT_GROUP" order="209" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="PRODUCT_GROUP"/>
+      <keyMapping columnObjectName="Projection_1" columnName="PRODUCT_GROUP"/>
+    </attribute>
+    <attribute id="PLATFORM_GROUP" order="210" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="PLATFORM_GROUP"/>
+      <keyMapping columnObjectName="Projection_1" columnName="PLATFORM_GROUP"/>
+    </attribute>
+    <attribute id="PRODUCT_PLATFORM" order="211" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="PRODUCT_PLATFORM"/>
+      <keyMapping columnObjectName="Projection_1" columnName="PRODUCT_PLATFORM"/>
+    </attribute>
+    <attribute id="CURRENT_QTR_IND" order="212" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CURRENT_QTR_IND"/>
+      <keyMapping columnObjectName="Projection_1" columnName="CURRENT_QTR_IND"/>
+    </attribute>
+    <attribute id="DISTI_GEO" order="213" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="DISTI_GEO"/>
+      <keyMapping columnObjectName="Projection_1" columnName="DISTI_GEO"/>
+    </attribute>
+    <attribute id="DISTI_REGION" order="214" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="DISTI_REGION"/>
+      <keyMapping columnObjectName="Projection_1" columnName="DISTI_REGION"/>
+    </attribute>
+    <attribute id="DISTI_SUBREGION" order="215" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="DISTI_SUBREGION"/>
+      <keyMapping columnObjectName="Projection_1" columnName="DISTI_SUBREGION"/>
+    </attribute>
+    <attribute id="DISTI_TERRITORY" order="216" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="DISTI_TERRITORY"/>
+      <keyMapping columnObjectName="Projection_1" columnName="DISTI_TERRITORY"/>
+    </attribute>
+    <attribute id="DELL_ALLIANCE" order="217" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="DELL_ALLIANCE"/>
+      <keyMapping columnObjectName="Projection_1" columnName="DELL_ALLIANCE"/>
+    </attribute>
+    <attribute id="DELL_BILLTOORGANIZATION" order="218" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="DELL_BILLTOORGANIZATION"/>
+      <keyMapping columnObjectName="Projection_1" columnName="DELL_BILLTOORGANIZATION"/>
+    </attribute>
+    <attribute id="DELL_ENDUSERORGANIZATION" order="219" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="DELL_ENDUSERORGANIZATION"/>
+      <keyMapping columnObjectName="Projection_1" columnName="DELL_ENDUSERORGANIZATION"/>
+    </attribute>
+    <attribute id="CUSTOMER_SEGMENT" order="222" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CUSTOMER_SEGMENT"/>
+      <keyMapping columnObjectName="Projection_1" columnName="CUSTOMER_SEGMENT"/>
+    </attribute>
+    <attribute id="VCA_FLAG" order="223" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="VCA_FLAG"/>
+      <keyMapping columnObjectName="Projection_1" columnName="VCA_FLAG"/>
+    </attribute>
+    <attribute id="FPA_MARKET_TYPE" order="225" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="FPA_MARKET_TYPE"/>
+      <keyMapping columnObjectName="Projection_1" columnName="FPA_MARKET_TYPE"/>
+    </attribute>
+    <attribute id="VCPP_PREPAY_FLAG" order="226" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="VCPP_PREPAY_FLAG"/>
+      <keyMapping columnObjectName="Projection_1" columnName="VCPP_PREPAY_FLAG"/>
+    </attribute>
+    <attribute id="CLOUD_CREDIT_ORDER" order="227" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CLOUD_CREDIT_ORDER"/>
+      <keyMapping columnObjectName="Projection_1" columnName="CLOUD_CREDIT_ORDER"/>
+    </attribute>
+    <attribute id="EXTERNAL_CONTRACT_NUMBER" order="228" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="EXTERNAL_CONTRACT_NUMBER"/>
+      <keyMapping columnObjectName="Projection_1" columnName="EXTERNAL_CONTRACT_NUMBER"/>
+    </attribute>
+    <attribute id="PAYMENT_TERM" order="229" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="PAYMENT_TERM"/>
+      <keyMapping columnObjectName="Projection_1" columnName="PAYMENT_TERM"/>
+    </attribute>
+    <attribute id="USAGE_PERIOD" order="231" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="USAGE_PERIOD"/>
+      <keyMapping columnObjectName="Projection_1" columnName="USAGE_PERIOD"/>
+    </attribute>
+    <attribute id="GEORPT" order="232" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="GEORPT"/>
+      <keyMapping columnObjectName="Projection_1" columnName="GEORPT"/>
+    </attribute>
+    <attribute id="REGIONRPT" order="233" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="REGIONRPT"/>
+      <keyMapping columnObjectName="Projection_1" columnName="REGIONRPT"/>
+    </attribute>
+    <attribute id="SUBREGIONRPT" order="234" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="SUBREGIONRPT"/>
+      <keyMapping columnObjectName="Projection_1" columnName="SUBREGIONRPT"/>
+    </attribute>
+    <attribute id="TERRITORYRPT" order="235" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="TERRITORYRPT"/>
+      <keyMapping columnObjectName="Projection_1" columnName="TERRITORYRPT"/>
+    </attribute>
+    <attribute id="ADJ_DATE" order="236" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="ADJ_DATE"/>
+      <keyMapping columnObjectName="Projection_1" columnName="ADJ_DATE"/>
+    </attribute>
+    <attribute id="ADJ_WEEK" order="237" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="ADJ_WEEK"/>
+      <keyMapping columnObjectName="Projection_1" columnName="ADJ_WEEK"/>
+    </attribute>
+    <attribute id="ADJ_MONTH" order="238" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="ADJ_MONTH"/>
+      <keyMapping columnObjectName="Projection_1" columnName="ADJ_MONTH"/>
+    </attribute>
+    <attribute id="ADJ_QTR" order="239" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="ADJ_QTR"/>
+      <keyMapping columnObjectName="Projection_1" columnName="ADJ_QTR"/>
+    </attribute>
+    <attribute id="ADJ_TYPE" order="240" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="ADJ_TYPE"/>
+      <keyMapping columnObjectName="Projection_1" columnName="ADJ_TYPE"/>
+    </attribute>
+    <attribute id="MPL_FLAG" order="241" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="MPL_FLAG"/>
+      <keyMapping columnObjectName="Projection_1" columnName="MPL_FLAG"/>
+    </attribute>
+    <attribute id="FREEZE_EXCEPTION_FLAG" order="242" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="FREEZE_EXCEPTION_FLAG"/>
+      <keyMapping columnObjectName="Projection_1" columnName="FREEZE_EXCEPTION_FLAG"/>
+    </attribute>
+    <attribute id="BI_ID" order="243" semanticType="empty" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="BI_ID"/>
+      <keyMapping columnObjectName="Projection_1" columnName="BI_ID"/>
+    </attribute>
+    <attribute id="VERSION_ID" order="244" semanticType="empty" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="VERSION_ID"/>
+      <keyMapping columnObjectName="Projection_1" columnName="VERSION_ID"/>
+    </attribute>
+    <attribute id="ADJ_YEAR" order="245" semanticType="empty" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="ADJ_YEAR"/>
+      <keyMapping columnObjectName="Projection_1" columnName="ADJ_YEAR"/>
+    </attribute>
+    <attribute id="RENEWAL_IDENTITY_FLAG" order="246" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="RENEWAL_IDENTITY_FLAG"/>
+      <keyMapping columnObjectName="Projection_1" columnName="RENEWAL_IDENTITY_FLAG"/>
+    </attribute>
+  </attributes>
+  <calculatedAttributes/>
+  <baseMeasures>
+    <measure id="HEADERTOTAL" order="29" aggregationType="sum" measureType="simple">
+      <descriptions defaultDescription="HEADERTOTAL"/>
+      <measureMapping columnObjectName="Projection_1" columnName="HEADERTOTAL"/>
+    </measure>
+    <measure id="PRICE" order="30" aggregationType="sum" measureType="simple">
+      <descriptions defaultDescription="PRICE"/>
+      <measureMapping columnObjectName="Projection_1" columnName="PRICE"/>
+    </measure>
+    <measure id="DETAILTOTAL" order="31" aggregationType="sum" measureType="simple">
+      <descriptions defaultDescription="DETAILTOTAL"/>
+      <measureMapping columnObjectName="Projection_1" columnName="DETAILTOTAL"/>
+    </measure>
+    <measure id="CMO" order="51" aggregationType="min" measureType="simple">
+      <descriptions defaultDescription="CMO"/>
+      <measureMapping columnObjectName="Projection_1" columnName="CMO"/>
+    </measure>
+    <measure id="LISTPRICE" order="55" aggregationType="sum" measureType="simple">
+      <descriptions defaultDescription="LISTPRICE"/>
+      <measureMapping columnObjectName="Projection_1" columnName="LISTPRICE"/>
+    </measure>
+    <measure id="EXTLISTPRICE" order="56" aggregationType="sum" measureType="simple">
+      <descriptions defaultDescription="EXTLISTPRICE"/>
+      <measureMapping columnObjectName="Projection_1" columnName="EXTLISTPRICE"/>
+    </measure>
+    <measure id="OEMMONTH" order="57" aggregationType="sum" measureType="simple">
+      <descriptions defaultDescription="OEMMONTH"/>
+      <measureMapping columnObjectName="Projection_1" columnName="OEMMONTH"/>
+    </measure>
+    <measure id="LASTRUNDATE" order="58" aggregationType="min" measureType="simple">
+      <descriptions defaultDescription="LASTRUNDATE"/>
+      <measureMapping columnObjectName="Projection_1" columnName="LASTRUNDATE"/>
+    </measure>
+    <measure id="SNSMONTHS" order="59" aggregationType="sum" measureType="simple">
+      <descriptions defaultDescription="SNSMONTHS"/>
+      <measureMapping columnObjectName="Projection_1" columnName="SNSMONTHS"/>
+    </measure>
+    <measure id="SELLINGPRICE" order="60" aggregationType="sum" measureType="simple">
+      <descriptions defaultDescription="SELLINGPRICE"/>
+      <measureMapping columnObjectName="Projection_1" columnName="SELLINGPRICE"/>
+    </measure>
+    <measure id="DISC_TOTAL_LIST_PRICE" order="61" aggregationType="sum" measureType="simple">
+      <descriptions defaultDescription="DISC_TOTAL_LIST_PRICE"/>
+      <measureMapping columnObjectName="Projection_1" columnName="DISC_TOTAL_LIST_PRICE"/>
+    </measure>
+    <measure id="SHIPDATE" order="69" aggregationType="min" measureType="simple">
+      <descriptions defaultDescription="SHIPDATE"/>
+      <measureMapping columnObjectName="Projection_1" columnName="SHIPDATE"/>
+    </measure>
+    <measure id="PHOENIXID" order="74" aggregationType="sum" measureType="simple">
+      <descriptions defaultDescription="PHOENIXID"/>
+      <measureMapping columnObjectName="Projection_1" columnName="PHOENIXID"/>
+    </measure>
+    <measure id="PRICELC" order="82" aggregationType="sum" measureType="simple">
+      <descriptions defaultDescription="PRICELC"/>
+      <measureMapping columnObjectName="Projection_1" columnName="PRICELC"/>
+    </measure>
+    <measure id="DETAILTOTALLC" order="83" aggregationType="sum" measureType="simple">
+      <descriptions defaultDescription="DETAILTOTALLC"/>
+      <measureMapping columnObjectName="Projection_1" columnName="DETAILTOTALLC"/>
+    </measure>
+    <measure id="HEADERTOTALLC" order="84" aggregationType="sum" measureType="simple">
+      <descriptions defaultDescription="HEADERTOTALLC"/>
+      <measureMapping columnObjectName="Projection_1" columnName="HEADERTOTALLC"/>
+    </measure>
+    <measure id="LISTPRICELC" order="85" aggregationType="sum" measureType="simple">
+      <descriptions defaultDescription="LISTPRICELC"/>
+      <measureMapping columnObjectName="Projection_1" columnName="LISTPRICELC"/>
+    </measure>
+    <measure id="EXTLISTPRICELC" order="86" aggregationType="sum" measureType="simple">
+      <descriptions defaultDescription="EXTLISTPRICELC"/>
+      <measureMapping columnObjectName="Projection_1" columnName="EXTLISTPRICELC"/>
+    </measure>
+    <measure id="PRICEUSD" order="87" aggregationType="sum" measureType="simple">
+      <descriptions defaultDescription="PRICEUSD"/>
+      <measureMapping columnObjectName="Projection_1" columnName="PRICEUSD"/>
+    </measure>
+    <measure id="DETAILTOTALUSD" order="88" aggregationType="sum" measureType="simple">
+      <descriptions defaultDescription="DETAILTOTALUSD"/>
+      <measureMapping columnObjectName="Projection_1" columnName="DETAILTOTALUSD"/>
+    </measure>
+    <measure id="HEADERTOTALUSD" order="89" aggregationType="sum" measureType="simple">
+      <descriptions defaultDescription="HEADERTOTALUSD"/>
+      <measureMapping columnObjectName="Projection_1" columnName="HEADERTOTALUSD"/>
+    </measure>
+    <measure id="LISTPRICEUSD" order="90" aggregationType="sum" measureType="simple">
+      <descriptions defaultDescription="LISTPRICEUSD"/>
+      <measureMapping columnObjectName="Projection_1" columnName="LISTPRICEUSD"/>
+    </measure>
+    <measure id="EXTLISTPRICEUSD" order="91" aggregationType="sum" measureType="simple">
+      <descriptions defaultDescription="EXTLISTPRICEUSD"/>
+      <measureMapping columnObjectName="Projection_1" columnName="EXTLISTPRICEUSD"/>
+    </measure>
+    <measure id="QUANTITY2" order="94" aggregationType="sum" measureType="simple">
+      <descriptions defaultDescription="QUANTITY2"/>
+      <measureMapping columnObjectName="Projection_1" columnName="QUANTITY2"/>
+    </measure>
+    <measure id="EBS_HEADER_ID" order="95" aggregationType="sum" measureType="simple">
+      <descriptions defaultDescription="EBS_HEADER_ID"/>
+      <measureMapping columnObjectName="Projection_1" columnName="EBS_HEADER_ID"/>
+    </measure>
+    <measure id="EBS_LINE_ID" order="96" aggregationType="sum" measureType="simple">
+      <descriptions defaultDescription="EBS_LINE_ID"/>
+      <measureMapping columnObjectName="Projection_1" columnName="EBS_LINE_ID"/>
+    </measure>
+    <measure id="LASTUPDATEDATE" order="97" aggregationType="min" measureType="simple">
+      <descriptions defaultDescription="LASTUPDATEDATE"/>
+      <measureMapping columnObjectName="Projection_1" columnName="LASTUPDATEDATE"/>
+    </measure>
+    <measure id="DETAILTOTALCONSTANTCUR" order="98" aggregationType="sum" measureType="simple">
+      <descriptions defaultDescription="DETAILTOTALCONSTANTCUR"/>
+      <measureMapping columnObjectName="Projection_1" columnName="DETAILTOTALCONSTANTCUR"/>
+    </measure>
+    <measure id="DETAILTOTALCONSTANTPLAN" order="99" aggregationType="sum" measureType="simple">
+      <descriptions defaultDescription="DETAILTOTALCONSTANTPLAN"/>
+      <measureMapping columnObjectName="Projection_1" columnName="DETAILTOTALCONSTANTPLAN"/>
+    </measure>
+    <measure id="CREATED_BY" order="126" aggregationType="sum" measureType="simple">
+      <descriptions defaultDescription="CREATED_BY"/>
+      <measureMapping columnObjectName="Projection_1" columnName="CREATED_BY"/>
+    </measure>
+    <measure id="CREATION_DATE" order="127" aggregationType="min" measureType="simple">
+      <descriptions defaultDescription="CREATION_DATE"/>
+      <measureMapping columnObjectName="Projection_1" columnName="CREATION_DATE"/>
+    </measure>
+    <measure id="LAST_UPDATED_BY" order="128" aggregationType="sum" measureType="simple">
+      <descriptions defaultDescription="LAST_UPDATED_BY"/>
+      <measureMapping columnObjectName="Projection_1" columnName="LAST_UPDATED_BY"/>
+    </measure>
+    <measure id="LAST_UPDATE_DATE" order="129" aggregationType="min" measureType="simple">
+      <descriptions defaultDescription="LAST_UPDATE_DATE"/>
+      <measureMapping columnObjectName="Projection_1" columnName="LAST_UPDATE_DATE"/>
+    </measure>
+    <measure id="LAST_UPDATE_LOGIN" order="130" aggregationType="sum" measureType="simple">
+      <descriptions defaultDescription="LAST_UPDATE_LOGIN"/>
+      <measureMapping columnObjectName="Projection_1" columnName="LAST_UPDATE_LOGIN"/>
+    </measure>
+    <measure id="ACTIVATION_POOL_NUM" order="132" aggregationType="sum" measureType="simple">
+      <descriptions defaultDescription="ACTIVATION_POOL_NUM"/>
+      <measureMapping columnObjectName="Projection_1" columnName="ACTIVATION_POOL_NUM"/>
+    </measure>
+    <measure id="LINK_TO_BOOKING_LINE_ID" order="133" aggregationType="sum" measureType="simple">
+      <descriptions defaultDescription="LINK_TO_BOOKING_LINE_ID"/>
+      <measureMapping columnObjectName="Projection_1" columnName="LINK_TO_BOOKING_LINE_ID"/>
+    </measure>
+    <measure id="COMM_CREDIT_DATE" order="137" aggregationType="min" measureType="simple">
+      <descriptions defaultDescription="COMM_CREDIT_DATE"/>
+      <measureMapping columnObjectName="Projection_1" columnName="COMM_CREDIT_DATE"/>
+    </measure>
+    <measure id="TERRITORY_ID" order="157" aggregationType="sum" measureType="simple">
+      <descriptions defaultDescription="TERRITORY_ID"/>
+      <measureMapping columnObjectName="Projection_1" columnName="TERRITORY_ID"/>
+    </measure>
+    <measure id="TERRITORY_ID_BOOK" order="158" aggregationType="sum" measureType="simple">
+      <descriptions defaultDescription="TERRITORY_ID_BOOK"/>
+      <measureMapping columnObjectName="Projection_1" columnName="TERRITORY_ID_BOOK"/>
+    </measure>
+    <measure id="BILLTO_CUSTOMER_ID" order="160" aggregationType="sum" measureType="simple">
+      <descriptions defaultDescription="BILLTO_CUSTOMER_ID"/>
+      <measureMapping columnObjectName="Projection_1" columnName="BILLTO_CUSTOMER_ID"/>
+    </measure>
+    <measure id="SHIPTO_CUSTOMER_ID" order="161" aggregationType="sum" measureType="simple">
+      <descriptions defaultDescription="SHIPTO_CUSTOMER_ID"/>
+      <measureMapping columnObjectName="Projection_1" columnName="SHIPTO_CUSTOMER_ID"/>
+    </measure>
+    <measure id="ENDUSER_CUSTOMER_ID" order="162" aggregationType="sum" measureType="simple">
+      <descriptions defaultDescription="ENDUSER_CUSTOMER_ID"/>
+      <measureMapping columnObjectName="Projection_1" columnName="ENDUSER_CUSTOMER_ID"/>
+    </measure>
+    <measure id="RESELLER_CUSTOMER_ID" order="163" aggregationType="sum" measureType="simple">
+      <descriptions defaultDescription="RESELLER_CUSTOMER_ID"/>
+      <measureMapping columnObjectName="Projection_1" columnName="RESELLER_CUSTOMER_ID"/>
+    </measure>
+    <measure id="HEADER_CREATION_DATE" order="173" aggregationType="min" measureType="simple">
+      <descriptions defaultDescription="HEADER_CREATION_DATE"/>
+      <measureMapping columnObjectName="Projection_1" columnName="HEADER_CREATION_DATE"/>
+    </measure>
+    <measure id="HEADER_LAST_UPDATE_DATE" order="174" aggregationType="min" measureType="simple">
+      <descriptions defaultDescription="HEADER_LAST_UPDATE_DATE"/>
+      <measureMapping columnObjectName="Projection_1" columnName="HEADER_LAST_UPDATE_DATE"/>
+    </measure>
+    <measure id="LINE_CREATION_DATE" order="175" aggregationType="min" measureType="simple">
+      <descriptions defaultDescription="LINE_CREATION_DATE"/>
+      <measureMapping columnObjectName="Projection_1" columnName="LINE_CREATION_DATE"/>
+    </measure>
+    <measure id="LINE_LAST_UPDATE_DATE" order="176" aggregationType="min" measureType="simple">
+      <descriptions defaultDescription="LINE_LAST_UPDATE_DATE"/>
+      <measureMapping columnObjectName="Projection_1" columnName="LINE_LAST_UPDATE_DATE"/>
+    </measure>
+    <measure id="DIST_CREATION_DATE" order="177" aggregationType="min" measureType="simple">
+      <descriptions defaultDescription="DIST_CREATION_DATE"/>
+      <measureMapping columnObjectName="Projection_1" columnName="DIST_CREATION_DATE"/>
+    </measure>
+    <measure id="DIST_LAST_UPDATE_DATE" order="178" aggregationType="min" measureType="simple">
+      <descriptions defaultDescription="DIST_LAST_UPDATE_DATE"/>
+      <measureMapping columnObjectName="Projection_1" columnName="DIST_LAST_UPDATE_DATE"/>
+    </measure>
+    <measure id="ITCV_DETAIL_TOTAL" order="186" aggregationType="sum" measureType="simple">
+      <descriptions defaultDescription="ITCV_DETAIL_TOTAL"/>
+      <measureMapping columnObjectName="Projection_1" columnName="ITCV_DETAIL_TOTAL"/>
+    </measure>
+    <measure id="ITCV_DETAIL_TOTAL_LC" order="187" aggregationType="sum" measureType="simple">
+      <descriptions defaultDescription="ITCV_DETAIL_TOTAL_LC"/>
+      <measureMapping columnObjectName="Projection_1" columnName="ITCV_DETAIL_TOTAL_LC"/>
+    </measure>
+    <measure id="ACV_INSTALLMENT_NUMBER" order="188" aggregationType="sum" measureType="simple">
+      <descriptions defaultDescription="ACV_INSTALLMENT_NUMBER"/>
+      <measureMapping columnObjectName="Projection_1" columnName="ACV_INSTALLMENT_NUMBER"/>
+    </measure>
+    <measure id="HEADER_TOTAL_CC" order="191" aggregationType="sum" measureType="simple">
+      <descriptions defaultDescription="HEADER_TOTAL_CC"/>
+      <measureMapping columnObjectName="Projection_1" columnName="HEADER_TOTAL_CC"/>
+    </measure>
+    <measure id="DETAIL_TOTAL_PRV_HLF_CC" order="192" aggregationType="sum" measureType="simple">
+      <descriptions defaultDescription="DETAIL_TOTAL_PRV_HLF_CC"/>
+      <measureMapping columnObjectName="Projection_1" columnName="DETAIL_TOTAL_PRV_HLF_CC"/>
+    </measure>
+    <measure id="QUANTITY" order="220" aggregationType="sum" measureType="simple">
+      <descriptions defaultDescription="QUANTITY"/>
+      <measureMapping columnObjectName="Projection_1" columnName="QUANTITY"/>
+    </measure>
+    <measure id="ITCV_DETAIL_TOTAL_DRVD" order="221" aggregationType="sum" measureType="simple">
+      <descriptions defaultDescription="ITCV_DETAIL_TOTAL_DRVD"/>
+      <measureMapping columnObjectName="Projection_1" columnName="ITCV_DETAIL_TOTAL_DRVD"/>
+    </measure>
+    <measure id="DETAIL_TOTAL_CONSTANT_CUR_IR" order="224" aggregationType="sum" measureType="simple">
+      <descriptions defaultDescription="DETAIL_TOTAL_CONSTANT_CUR_IR"/>
+      <measureMapping columnObjectName="Projection_1" columnName="DETAIL_TOTAL_CONSTANT_CUR_IR"/>
+    </measure>
+    <measure id="EFFECTIVE_FULL_DURATION" order="230" aggregationType="sum" measureType="simple">
+      <descriptions defaultDescription="EFFECTIVE_FULL_DURATION"/>
+      <measureMapping columnObjectName="Projection_1" columnName="EFFECTIVE_FULL_DURATION"/>
+    </measure>
+  </baseMeasures>
+  <calculatedMeasures/>
+  <restrictedMeasures/>
+  <localDimensions/>
+</logicalModel>
+<layout>
+  <shapes>
+    <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+      <upperLeftCorner x="40" y="85"/>
+    </shape>
+  
+    <shape expanded="true" modelObjectName="Projection_1" modelObjectNameSpace="CalculationView">
+      <upperLeftCorner x="80" y="179"/>
+      <rectangleSize height="30" width="160"/>
+    </shape>
+  </shapes>
+</layout>
+</Calculation:scenario>
