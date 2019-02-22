@@ -4,5 +4,12 @@
       "object": "XXVM_BOOKING_BI_EXTRACT",
       "schema": "VEBS"
     }
+  },
+  "EDW.BOOKING::S_VRPT_FLASH_BY_QUARTER": {
+    "target": {
+      "object": "EDW.BOOKING/VRPT_FLASH_BYQUARTER",
+      "schema": "_SYS_BIC",
+      "database": "BPD"
+    }
   }
 }
