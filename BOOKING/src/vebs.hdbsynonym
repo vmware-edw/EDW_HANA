@@ -11,5 +11,11 @@
       "schema": "_SYS_BIC",
       "database": "BPD"
     }
+  },
+  "EDW.BOOKING::S_VRPT_FLASH_BY_REGION": {
+    "target": {
+      "object": "EDW.BOOKING/VRPT_FLASH_BYREGION",
+      "schema": "_SYS_BIC"
+    }
   }
 }
